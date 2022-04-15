@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="text" id="text2"><br>
+    <input type="button" value="Addition(+)" onclick="sum()">
+    <input type="button" value="Substraction(-)" onclick="hieu()">
+    <input type="button" value="Multiplition(X)" onclick="tich()">
+    <input type="button" value="Division(/)" onclick="thuong()">
+    <script>
+        function sum(){
+            let a = document.getElementById('text1').value;
+            let b = document.getElementById('text2').value;
+            let sum = parseFloat(a) + parseFloat(b);
+            document.write('Result:' +sum);
+        }
+        function hieu(){
+            let a = document.getElementById('text1').value;
+            let b = document.getElementById('text2').value;
+            let hieu = parseFloat(a) - parseFloat(b);
+            document.write('Result:' +hieu);
+        }
+        function tich(){
+            let a = document.getElementById('text1').value;
+            let b = document.getElementById('text2').value;
+            let tich = parseFloat(a)*parseFloat(b);
+            document.write('Result:' +tich);
+        }
+        function thuong(){
+            let a = document.getElementById('text1').value;
+            let b = document.getElementById('text2').value;
+            if(b == 0){
+                alert('Wrong!!!Please enter againt');
+            }else{
+            let thuong = parseFloat(a)/parseFloat(b);
+            document.write('Result:' +thuong);
+            }
+        }
+    </script>
+</body>
+</html>

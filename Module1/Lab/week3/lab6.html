@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 80%;
+        }
+
+        th,
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text" id="dauvao"></td>
+            <td><select name="" id="select1">
+                    <option value="a">VND</option>
+                    <option value="b">USD</option>
+                </select></td>
+            <td><select name="" id="select2">
+                    <option value="b">USD</option>
+                    <option value="a">VND</option>
+            </td>
+            <td><input type="button" onclick="myFunction()" value="Convert"></td>
+        </tr>
+    </table>
+    <script>
+        function myFunction() {
+            let amount = document.getElementById('dauvao').value;
+            let select1 = document.getElementById('select1').value;
+            let select2 = document.getElementById('select2').value;
+            if(select1 == select2){
+                document.write('Result: '+amount);
+            }if(select1 == "a" && select2 == "b"){
+                document.write('Result: '+ amount*0.00004387889);
+            }if(select1 == "b" && select2 == "a"){
+                document.write('Result: '+ amount/0.00004387889);
+            }
+        }
+    </script>
+</body>
+
+</html>
