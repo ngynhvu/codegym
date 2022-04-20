@@ -140,9 +140,14 @@
         }
     </script>
 
-    Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+    <!-- Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng. -->
     <script>
-        
+        var money = parseInt(prompt('Enter money: '));
+        var n = parseInt(prompt('Enter month: '));
+        for(var i = 0; i<n;i++){
+            money = money + money*0.3/100;
+        } 
+        alert(money);
     </script>
 
 </body>
