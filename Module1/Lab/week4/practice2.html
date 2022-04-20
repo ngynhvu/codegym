@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bài 1: Chuyển từ độ C sang độ F. -->
+    <script>
+        var c = parseFloat(prompt('Enter C: '));
+        var f = 35 + c*9/5;
+        alert('Độ F là:'+f);
+    </script>
+
+    <!-- Bài 2: Chuyển từ mét sang feet: -->
+    <script>
+        var m = parseFloat(prompt('Enter m here: '));
+        var ft = m*3.2808;
+        alert('Feet: '+ft);
+    </script>
+
+    <!-- Bài 3: Tính diện tích hình vuông khi biết cạnh a. -->
+    <script>
+        var a = parseFloat(prompt("Enter here: "));
+        var hv = a*a;
+        alert("Dien tich: "+hv);
+    </script>
+
+    <!-- Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b. -->
+    <script>
+        var a = parseFloat(prompt("Enter a chieu: "));
+        var b = parseFloat(prompt("Enter b here: "));
+        var hcn = a*b;
+        alert("Dien tich: "+hcn);
+    </script>
+    
+    <!-- Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b -->
+    <script>
+        var a = parseFloat(prompt("Enter a chieu: "));
+        var b = parseFloat(prompt("Enter b here: "));
+        var tg = a*b/2;
+        alert("Dien tich: "+tg);
+    </script>
+
+    <!-- Bài 6: Giải phương trình bậc 1. -->
+    <script>
+        var a = parseFloat(prompt("Enter a chieu: "));
+        var b = parseFloat(prompt("Enter b here: "));
+        var x;
+        if(a==0){
+            x = -b;
+            alert('x = '+ x);
+        }else{
+            x = -b/a;
+            alert('x = '+ x);
+        }
+    </script>
+
+    <!-- Bài 7: Giải phương trình bậc 2. -->
+    <script>
+        var a = parseFloat(prompt("Enter a chieu: "));
+        var b = parseFloat(prompt("Enter b here: "));
+        var c = parseFloat(prompt("Enter c here: "));
+        var delta = b*b - 4*a*c;
+        var x1, x2;
+        if(delta < 0){
+            alert('Phuong trinh vo nghiem');
+        }else if(delta == 0){
+            x1 = x2 = -b/(2*a);
+            alert('Phuong trinh co mot nghiem duy nhat x = '+x1);
+        }else{
+            delta = sprt(delta)
+            x1 = (-b + delta)/(2*a);
+            x2 = (-b - delta)/(2*a);
+            alert('Phuong trinh co 2 nghiem la x1 = '+x1+ 'va x2 = '+x2)
+        }
+    </script>
+
+    <!-- Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0. -->
+    <script>
+        var tuoi = parseInt(prompt("Nhap tuoi cua ban: "));
+        if(0< tuoi < 120){
+            alert('Day la tuoi cua 1 nguoi');
+        }else{
+            alert('Khong fai tuoi cua ng');
+        }
+    </script>
+
+    Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+    <script>
+        var a = parseFloat(prompt("Enter a chieu: "));
+        var b = parseFloat(prompt("Enter b here: "));
+        var c = parseFloat(prompt("Enter c here: "));
+        if(a,b,c > 0 && a + b > c || b + c > a || a + c > b){
+            alert('3 so vua nhap la 3 canh cua 1 tam giac');
+        }else{
+            alert('3 so vua nhap khong fai la 3 canh cua 1 tam giac');
+        }
+    </script>
+
+    <!-- Bài 10: Viết chương trình tính giá điện. -->
+    <script>
+        var soDien = parseFloat(prompt("So kWh da su dung: "));
+        var tien;
+        if(0<soDien<50){
+            tien = soDien*1.678;
+            alert('So tien dien la: '+tien);
+        }else if(51<soDien<100){
+            tien = soDien*1.734
+            alert('So tien dien la: '+tien);
+        }else if(101<soDien<200){
+            tien = soDien*2.014;
+            alert('So tien dien la: '+tien);
+        }
+    </script>
+
+    Bài 11: Viết chương trình tính thuế thu nhập cá nhân.
+    <script>
+        var tn = parseFloat(prompt('Thu nhap cua ban (trieu): '));
+        var thue;
+        if(tn<=5){
+            thue = tn*5/100;
+            alert('So tien thue fai nop laf: '+tn+'tr');
+        }else if(t<tn<=10){
+            thue = tn*10/100 - 0.25;
+            alert('So tien thue fai nop laf: '+tn+'tr');
+        }else if(10<tn<=18){
+            thue = tn*15/100 - 0.75;
+            alert('So tien thue fai nop laf: '+tn+'tr');
+        }
+        else if(18<tn<=32){
+            thue = tn*20/100 - 1.65;
+            alert('So tien thue fai nop laf: '+tn+'tr');
+        }
+        else if(32<tn<=52){
+            thue = tn*25/100 - 3.25;
+            alert('So tien thue fai nop laf: '+tn+'tr');
+        }
+    </script>
+
+    Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+    <script>
+        
+    </script>
+
+</body>
+</html>
