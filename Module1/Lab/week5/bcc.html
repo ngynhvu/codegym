@@ -1,0 +1,13 @@
+<script>
+    var sout;
+    sout = "<table border ='1' width = '100%'>"
+    for(var i = 1; i<11;i++){
+        sout = sout + "<tr>"
+        for(var j = 2; j<10; j++){
+            sout = sout + "<td>"+ j + 'x' + i + '=' + i * j + "</td>";
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + '</table>';
+    document.write(sout);
+</script>
