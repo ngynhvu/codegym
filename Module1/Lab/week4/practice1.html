@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không -->
+    <script>
+        var a = parseInt(prompt("Enter a here: "));
+        var b = parseInt(prompt("Enter b here: "));
+        if (a % b == 0) {
+            alert('a chia het cho b');
+        } else {
+            alert('a khong chia het cho b');
+        }
+    </script>
+
+    <!-- Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10. -->
+    <script>
+        var age = parseInt(prompt('Enter your age:'));
+        if (age < 16) {
+            alert('hoc sinh kh du dk vao hoc lp 10');
+        } else {
+            alert("hs du dk vao lp 10");
+        }
+    </script>
+
+    <!-- Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0 -->
+    <script>
+        var n = parseInt(prompt('Enter here:'));
+        if (n < 0) {
+            alert(n + 'nho hon 0');
+        } else if (n > 0) {
+            alert(n + 'lon hon 0');
+        }
+    </script>
+
+    <!-- Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó -->
+    <script>
+        var a = parseInt(prompt("Enter a here: "));
+        var b = parseInt(prompt("Enter b here: "));
+        var c = parseInt(prompt("Enter c here: "));
+        var max = a;
+        if (b > max) {
+            max = b;
+        }
+        if (c > max) {
+            max = c;
+            alert(max);
+        }
+    </script>
+
+    <!-- Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ -->
+    <script>
+        var a = parseFloat(prompt('Điểm: '));
+        var b = parseFloat(prompt('Điểm: '));
+        var c = parseFloat(prompt('Điểm: '));
+        var tb =(a+b+c)/3;
+        if(tb>=9.0) alert('A');
+        else if(7.0<=tb<9.0 ) alert('B');
+        else if(5.0<=tb<7.0) alert('C');
+        else alert('F');
+    </script>
+
+    <!-- Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng -->
+    <script>
+        var sl = parseInt(prompt("So luong san pham da ban: "));
+        var rose;
+        if(sl<=100){
+            rose = sl*5/100;
+            alert(rose);
+        }else if(100<sl<=200){
+            rose = sl*10/100;
+            alert(rose);
+        }else if(sl>200){
+            rose = sl*20/100;
+            alert(rose);
+        }
+    </script>
+
+    <!-- Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho -->
+    <script>
+        var m = parseInt(prompt('So phut: '));
+        var total;
+        var phi;
+        if(m>200){
+            total = (m-200)*200+150*400+50*600;
+        }else if(m>50){
+            total = (m-50)*400+50*600;
+        } else{
+            total = m*600;
+        }
+        phi = total*0.01 + 25000;
+        alert(phi);
+    </script>
+</body>
+
+</html>
