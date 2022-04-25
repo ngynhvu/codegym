@@ -1,0 +1,19 @@
+<script>
+    function isprime(n) {
+        let flag = 1;
+        if (n < 2) return flag = 0;
+        let i = 2;
+        while (i < n) {
+            if (n % i == 0) {
+                flag = 0;
+                break;
+            }
+            i++;
+        }
+        return flag;
+    }
+    for (let j = 0; j <= 20; j++) {
+        if (isprime(j) == 1) 
+        document.write(j + ',');
+    }
+</script>
