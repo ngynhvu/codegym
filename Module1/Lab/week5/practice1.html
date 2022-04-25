@@ -56,12 +56,13 @@
 <!-- Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci. -->
 <script>
     var n1 = 0, n2 = 1, nextNumber;
-    var total=0;
-    for (var i = 1; i <= 20; i++) {
+    var total=1;
+    for (var i = 1; i < 19; i++) {
         nextNumber = n1 + n2;
         n1 = n2;
         n2 = nextNumber;
         total += nextNumber;
+        document.write(nextNumber + ",");
     }
     document.write(total);
 </script>
