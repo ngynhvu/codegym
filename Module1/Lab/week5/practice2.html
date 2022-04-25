@@ -1,0 +1,121 @@
+<!-- Bài 1: In dãy Finonaci -->
+<script>
+    var n =parseInt(prompt('Enter here:'))
+    var n1 = 0, n2 = 1, nextNumber;
+    for (var i = 1; i <= n; i++) {
+        document.write(n1 + ',');
+        nextNumber = n1 + n2;
+        n1 = n2;
+        n2 = nextNumber;
+    }
+</script>
+
+<!-- Bài 2: Tính giai thừa của một số nguyên dương -->
+<script>
+    var n = parseInt(prompt('Enter n here: '))
+    var total = 1;
+    for( var i = 1; i<=n;i++){
+        total = total*i;
+    }
+    document.write(n + '! = '+ total);
+</script>
+
+<!-- Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau -->
+<script>
+    var n = parseInt(prompt('Enter here: '));
+    var i ;
+    for(i =1;i<=n;i++){
+        for(var j =1; j<=i; j++){
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+    document.write("<br>")
+
+    for(i =n;i>=1;i--){
+        for(var j =1; j<=i; j++){
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+    document.write("<br>")
+    for(i =n;i>=1;i--){
+        for(var j =1; j<i; j++){
+            document.write('-');
+        }
+        for(var j =n; j>=i; j--){
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+
+    document.write("<br>")
+    for(i =1;i<=n;i++){
+        for(var j =1; j<i; j++){
+            document.write('-');
+        }
+        for(var j =i; j<=n; j++){
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+</script>
+
+<!-- Bài 4: In hình chữ nhật -->
+<script>
+    var m = parseInt(prompt("Nhập chiều dài: "));
+    var n = parseInt(prompt("Nhập chiều rộng: "));
+    for(var i = 1; i <= n; i++)    {
+        for(var k = 1 ; k <= m; k++){
+            if(i == 1 || k == 1 || i == n || k == m){
+                document.write("*");
+            }
+            else{
+                document.write("&nbsp ");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+
+<!-- Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng. -->
+<script>
+    var month = parseInt(prompt("Số tháng cho vay: "));
+    var money = parseInt(prompt("Số tiền ban đầu"));
+    var lai = parseFloat(prompt("Tiền lãi hàng tháng: "));
+    for(let i =1; i<=month; i++)
+    {
+        money =money+ money*lai/100;
+    }
+    alert(money);
+</script>
+
+<!-- Bài 6: In hình trái tim -->
+<script>
+    var a, b, size = 15;
+    for(a =size/2; a <= size; a = a+2){
+        for (b = 1; b < size-a; b = b+2)
+        document.write("&nbsp ");
+
+        for (b = 1; b <= a; b++){
+            document.write("*"); 
+        }
+
+        for (b = 1; b <= size-a; b++)
+        document.write("&nbsp ");
+
+        for (b = 1; b <= a-1; b++)
+        document.write("*");  
+
+        document.write("<br>");
+    }
+    for (a = size; a >= 0; a--){
+        for (b = a; b < size; b++)
+            document.write("&nbsp ");
+ 
+        for (b = 1; b <= ((a * 2) - 1); b++)
+        document.write("*");
+
+        document.write("<br>");
+    }
+</script>

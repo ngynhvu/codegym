@@ -28,8 +28,15 @@
                 case 2:
                     document.writes('Tháng', + month, "có 28 hoặc 29 ngày");
                     break;
-                default:
+                case 4:
+                case 6:
+                case 8:
+                case 10:
+                case 12:
                     document.write('Tháng', + month, 'có 30 ngày');
+                    break;
+                default:
+                    document.write("Tháng không hợp lệ");
                     break;
             }
         }

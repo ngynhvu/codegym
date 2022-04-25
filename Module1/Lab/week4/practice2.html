@@ -88,12 +88,12 @@
         }
     </script>
 
-    Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+    <!-- Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là: -->
     <script>
         var a = parseFloat(prompt("Enter a chieu: "));
         var b = parseFloat(prompt("Enter b here: "));
         var c = parseFloat(prompt("Enter c here: "));
-        if(a,b,c > 0 && a + b > c || b + c > a || a + c > b){
+        if(a > 0 && b>0&&c>0  && a + b > c || b + c > a || a + c > b){
             alert('3 so vua nhap la 3 canh cua 1 tam giac');
         }else{
             alert('3 so vua nhap khong fai la 3 canh cua 1 tam giac');
