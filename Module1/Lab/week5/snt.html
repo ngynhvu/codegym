@@ -1,29 +1,35 @@
 <script>
-    function isprime(n) {
-        let flag = 1;
-        if (n < 2) return flag = 0;
-        let i = 2;
-        while (i < n) {
-            if (n % i == 0) {
-                flag = 0;
-                break;
+    function checkPrimeNumbers(n) {
+        if (n < 2){
+            return false;
+        }
+        else if (n == 2){
+            return true;
+        }
+        else if (n % 2 == 0){
+            return false;
+        }
+        else { 
+            for (var i = 3; i < Math.sqrt(n); i+=2)
+            {
+                if (n % i == 0){
+                    return false;
+                    break;
+                }
             }
-            i++;
         }
-        return flag;
+        return true
     }
-    for(let i =2; i<n; i++){
-        if(n%i == 0);{
-            break;
-        }
-        document.write(j + ',');
+    var n = prompt("Nhập số nguyên tố đầu tiên bạn muốn in ra",'');
+    var count = 0;
+    var number = 2;
+    var result = "";
+    while ( count < n) {
+        if (checkPrimeNumbers(number)) {
+            count +=1;
+            result = result + `<span>${number} ;</span>`
+        } 
+        number+=1;
     }
-    for (let j = 0; j <= 20; j++) {
-        for(let i =2; i<n; i++){
-        if(n%i == 0);{
-            break;
-        }
-        document.write(j + ',');
-    }
-    }
+    document.write(result);
 </script>

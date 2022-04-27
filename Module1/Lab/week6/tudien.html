@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <input type="button" value="Dich" onclick="dich()">
+    <script>
+        function dich() {
+            var str = document.getElementById("input").value;
+            var english = ["hello", "computer"];
+            var tiengviet = ["xin chào", "máy tính"];
+            var result = [];
+
+            var result = english.indexOf(str);
+            if (result !== -1) {
+                document.write(tiengviet[result]);
+            } else {
+                document.write('not found');
+            }
+        }
+    </script>
+</body>
+
+</html>
