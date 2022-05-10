@@ -1,0 +1,85 @@
+<!-- Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được. -->
+<script>
+    function square(number){
+        var result = number * number;
+        return result;
+    }
+    var n = parseInt(prompt("Enter here: "));
+    document.write(square(n));
+</script>
+
+<!-- Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được -->
+<script>
+    var r = parseInt(prompt("Ban kinh: "));
+    document.write("Chu vi là"+chuvi(r)+"Dien tích là"+dientich(r))
+    function chuvi(R){
+        var result = 2*R*3.14;
+        return result;
+    }
+    function dientich(R){
+        var result = R*R*3.14;
+        return result;
+    }
+</script>
+
+<!-- Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được. -->
+<script>
+    function giaithua(number){
+        var total =1;
+        for(let i = 1;i<= number;i++){
+            total = total*i;
+        }
+        return total;
+    }
+
+    var n = parseInt(prompt("Enter here: "));
+    document.write(giaithua(n));
+</script>
+
+<!-- Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false. -->
+<script>
+
+    check(5);
+    function check(i){
+        var check= typeof(i);
+        if(check =="string"){
+            alert("False");
+        }else if(check == "number")
+        {
+            alert("True");
+        }
+    }
+</script>
+
+<!-- Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất. -->
+
+<!-- Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false. -->
+<script>
+    var n = parseInt(prompt("Enter here: "));
+    check(n);
+    function check(number){
+        if(number <0){
+            document.write("false");
+        }else if(number >0){
+            document.write("true");
+        }
+    }
+</script>
+
+
+<!-- Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó. -->
+
+<!-- Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó. -->
+<script>
+    var arr = prompt("Enter here: ");
+    a = arr.toString();
+    
+    function reverse(str){
+        var string=str.split("");
+ var arrStr=string.reverse();
+ return arrStr.join("");
+    }
+</script>
+
+
+<!-- Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.  -->

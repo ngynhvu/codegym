@@ -1,0 +1,15 @@
+<script>
+    var m = parseInt(prompt("Nhập chiều dài: "));
+    var n = parseInt(prompt("Nhập chiều rộng: "));
+    for(var i = 1; i <= n; i++)    {
+        for(var k = 1 ; k <= m; k++){
+            if(i == 1 || k == 1 || i == n || k == m){
+                document.write("*");
+            }
+            else{
+                document.write("&nbsp ");
+            }
+        }
+        document.write("<br>");
+    }
+</script>

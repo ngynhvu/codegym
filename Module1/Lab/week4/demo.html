@@ -1,0 +1,39 @@
+<script>
+    var n = parseInt(prompt('Enter here: '));
+    var i ;
+    for(i =1;i<=n;i++){
+        for(var j =1; j<=i; j++){
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+    document.write("<br>")
+
+    for(i =n;i>=1;i--){
+        for(var j =1; j<=i; j++){
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+    document.write("<br>")
+    for(i =n;i>=1;i--){
+        for(var j =1; j<i; j++){
+            document.write('-');
+        }
+        for(var j =n; j>=i; j--){
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+
+    document.write("<br>")
+    for(i =1;i<=n;i++){
+        for(var j =1; j<i; j++){
+            document.write('-');
+        }
+        for(var j =i; j<=n; j++){
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+</script>
