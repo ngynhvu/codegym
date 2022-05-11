@@ -1,0 +1,18 @@
+<script>
+    class Circle{
+        constructor(radius){
+            this.radius=radius;
+        };
+        getRadius(){
+            return this.radius;
+        };
+        getArea(){
+            return Math.PI*radius*radius;
+        }
+    }
+
+    let circle = new Circle(2);
+    let radius = circle.getRadius();
+    let area = circle.getArea();
+    document.write("radius: " + radius + "; area: " + area);
+</script>
