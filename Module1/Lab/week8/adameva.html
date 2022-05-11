@@ -1,0 +1,76 @@
+<script>
+    class Apple{
+        constructor(weight){
+            this.weight =weight;
+        }
+        decrease(){
+            return this.weight--;
+        }
+        ifEmpty(){
+            if(this.weight==0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        getWeight(){
+            return this.weight;
+        }
+    }
+    class Human{
+        constructor(name,gender,weight){
+            this.name = name;
+            this.gender = "";
+            this.weight = weight;
+        };
+        isMale(){
+            if(this.gender == "male"){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        setGender(sex){
+            this.gender = sex;
+        };
+        checkAppler(){
+            if(!Apple.ifEmpty){
+                return true;
+            }else{
+                return false
+            }
+        }
+        eat(){
+            if(!checkAppler){
+                this.weight++;
+                Apple.decrease();
+                onsole.log(`${this.name} eat apple....`)
+            }
+        }
+        getName(){
+            return this.name;
+        }
+        setName(ten){
+            return this.name = ten;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(kg){
+            this.weight =kg;
+        }
+    }
+    function theStory() {
+            var adam = new Human('adam', 60);
+            var eva = new Human('eva', 45);
+            var apple = new Apple()
+            adam.setGender('male');
+            eva.setGender('female');
+            while (apple.weight > 0) {
+                adam.eatApple(apple);
+                eva.eatApple(apple);
+            }
+            console.log('Apple are already eaten');
+        }
+    theStory();
+</script>
