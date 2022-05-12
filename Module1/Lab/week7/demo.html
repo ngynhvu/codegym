@@ -1,8 +1,11 @@
 <script>
-    var arr = prompt("Enter here: ");
-    a = arr.toString();
-    
-    function dao(array){
-        array. 
+    var arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    var arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    var input = prompt("Enter herre:");
+    var arr = arr1.indexOf(input);
+    if(arr!= -1){
+        document.write(arr2[arr]);
+    }else{
+        document.write("Not Found");
     }
 </script>
