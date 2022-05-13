@@ -52,6 +52,22 @@
 </script>
 
 <!-- Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất. -->
+<script>
+    var a = parseInt(prompt("Enter here: "));
+    var b = parseInt(prompt("Enter here: "))
+    var c = parseInt(prompt("Enter here: "))
+    check(a,b,c);
+    function check(x,y,z){
+        let min = x;
+        if(min>y){
+            min = y;
+        }
+        if(min>z){
+            min = z
+        }
+        alert(min);
+    }
+</script>
 
 <!-- Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false. -->
 <script>
@@ -69,6 +85,7 @@
 
 <!-- Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó. -->
 
+
 <!-- Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó. -->
 <script>
     var arr = prompt("Enter here: ");
@@ -83,3 +100,16 @@
 
 
 <!-- Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.  -->
+<script>
+    var a = prompt("Enter here:");
+    check(a);
+    function check(n){
+        var arr= ["@","%","*"];
+        let input = arr.indexOf(n);
+        if(input!=-1){
+            document.write(input);
+        }else{
+            return -1;
+        }
+    }
+</script>
