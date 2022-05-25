@@ -1,0 +1,13 @@
+<script>
+    var x =["a", "b", "c", "d", "e", "f", "g", "h" ,"i" ,"k" , "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var s1 = "aabcc";
+    var s2 = "adcaa"; 
+    var count = 0;
+    for(var i =0;i<x.length;i++){
+        if(s1.indexOf(x[i])!=-1 && s2.indexOf(x[i])!=-1){
+            count++;
+            alert(x[i]);
+        }
+    }
+    alert(count);
+</script>

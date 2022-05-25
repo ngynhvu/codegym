@@ -1,0 +1,22 @@
+<script>
+    let m = parseInt(prompt("input row:")); 
+    let n = parseInt(prompt("input col:"));
+    var max = arr[0][0];
+    let arr = new Array(m); //tạo mảng 1 chiều với 3 phần tử
+        for(let m = 0; m < arr.length; m++){ //row = 0
+            arr[m] = Array(m);
+
+            for(let n = 0; n< arr[m].length; n++){
+                let value = prompt("input ["+m+"]["+n+"]");
+                arr[m][n] = value;
+            }
+        }
+        for(let i=0; i<m;i++){
+            for(let j= 0;j<n;j++){
+                if(arr[i][j]>max){
+                    max = arr[i][j];
+                }
+            }
+        }
+    alert(max);
+</script>

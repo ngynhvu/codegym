@@ -1,0 +1,10 @@
+<script>
+    var n = parseInt(prompt("Enter here"))
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n - i; j++)
+            document.write("&nbsp ");
+        for (j = 1; j <= 2 * i - 1; j++)
+            document.write("*");
+        document.write("<br>")
+    }
+</script>

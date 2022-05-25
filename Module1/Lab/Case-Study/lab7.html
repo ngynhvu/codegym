@@ -1,0 +1,9 @@
+<script>
+    var a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var b = Array(a.length);
+    b[0]=a[0];
+    for(i = 1; i<a.length-1;i++){
+        b[i]=b[i-1]+a[i];
+    }
+    alert(b);
+</script>

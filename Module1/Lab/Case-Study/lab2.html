@@ -1,0 +1,13 @@
+<script>
+    var h = parseInt(prompt("Enter here: "));
+    for(let i=1;i<=h;i++ ){
+        for(let j =1;j<=i; j++){
+            if(j==1||i==j||i==h){   
+                document.write("*");
+            }else{
+                document.write("&nbsp ");
+            }
+        }
+        document.write("<br>");
+    }
+</script>

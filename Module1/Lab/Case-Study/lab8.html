@@ -1,0 +1,13 @@
+<script>
+    var A=[7,2,5,3,5,3];
+    var B=[7,2,5,4,6,3,5,3];
+    var C = Array(B.length);
+    for(i=0;i<B.length-1;i++)
+    {
+        var check = A.indexOf(B[i]);
+        if(check==-1){
+            C[i]=B[i];
+        }
+    }
+    alert(C);
+</script>

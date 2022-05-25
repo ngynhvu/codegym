@@ -1,0 +1,34 @@
+<script>
+    alert("1. Cafe(17k)\n2. Cam vắt(18k)\n3. Nước ép cà rốt(19k)\n4. Nước ép cà chua(20k)\n5. Nước lọc(19k)\n6. Nước dừa(21k)\n7. Thoát menu");
+    do {
+        var n = parseInt(prompt("Enter here"));
+        switch (n) {
+        case 1:  
+        var sl = parseInt(prompt("Số lượng: "));  
+        document.write("Gía:"+(sl*17));  
+            break;
+        case 2:
+        var sl = parseInt(prompt("Số lượng: ")); 
+        document.write("Gía:"+(sl*18));   
+            break;
+        case 3:
+        var sl = parseInt(prompt("Số lượng: ")); 
+        document.write("Gía:"+(sl*19));   
+            break;
+        case 4:
+        var sl = parseInt(prompt("Số lượng: "));
+        document.write("Gía:"+(sl*20));   
+            break;
+        case 5:
+        var sl = parseInt(prompt("Số lượng: ")); 
+        document.write("Gía:"+(sl*19));   
+            break;
+        case 6:
+        var sl = parseInt(prompt("Số lượng: "));  
+        document.write("Gía:"+(sl*21));  
+            break;
+        default:
+            break;
+        }
+    } while (n>7);
+</script>
