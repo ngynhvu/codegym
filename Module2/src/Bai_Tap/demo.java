@@ -2,15 +2,16 @@ package Bai_Tap;
 
 public class demo {
     public static void main(String[] args) {
-        int h =6;
-        for (int i = 1; i<= h; i++){
-            for(int j = h; j >= i; j--){
-                System.out.print(" ");
+        int[] a = {5, 6, 7, 8};
+
+        for(int i=0; i < a.length; i++){
+
+            if(a[i] % 2 == 0){
+
+                continue;
+
             }
-            for(int j = 1; j<=i;j++){
-                System.out.print("*");
-            }
-                System.out.println();
+            System.out.print(i);
         }
     }
 }
