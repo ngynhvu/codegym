@@ -1,2 +1,4 @@
-package Array;public class demo {
+package Array;
+
+public class demo {
 }
