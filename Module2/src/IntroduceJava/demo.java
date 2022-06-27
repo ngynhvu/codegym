@@ -1,2 +1,4 @@
-package IntroduceJava;public class demo {
+package IntroduceJava;
+
+public class demo {
 }
