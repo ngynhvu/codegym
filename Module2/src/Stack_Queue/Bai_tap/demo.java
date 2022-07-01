@@ -1,2 +1,4 @@
-package Stack_Queue.Bai_tap;public class demo {
+package Stack_Queue.Bai_tap;
+
+public class demo {
 }

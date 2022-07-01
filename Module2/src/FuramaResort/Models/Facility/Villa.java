@@ -1,4 +1,4 @@
-package FuramaResort.Models;
+package FuramaResort.Models.Facility;
 
 public class Villa extends Facility{
     private String roomStandard;

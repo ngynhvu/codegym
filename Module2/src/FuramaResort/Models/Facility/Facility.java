@@ -1,4 +1,4 @@
-package FuramaResort.Models;
+package FuramaResort.Models.Facility;
 
 public abstract class Facility {
     private String serviceName;
