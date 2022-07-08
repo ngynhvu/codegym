@@ -1,4 +1,6 @@
-package FuramaResort.Services;
+package FuramaResort.Services.ClassImpl;
 
-public class FacilityServiceImpl implements FacilityService{
+import FuramaResort.Services.Interface.FacilityService;
+
+public class FacilityServiceImpl implements FacilityService {
 }

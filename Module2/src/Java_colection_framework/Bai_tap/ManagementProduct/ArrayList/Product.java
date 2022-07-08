@@ -1,23 +1,23 @@
 package Java_colection_framework.Bai_tap.ManagementProduct.ArrayList;
 
 public class Product {
-    private String idProduct;
+    private int idProduct;
     private String nameProduct;
     private long priceProduct;
     public Product() {
     }
 
-    public Product(String idProduct, String nameProduct, long priceProduct) {
+    public Product(int idProduct, String nameProduct, long priceProduct) {
         this.idProduct = idProduct;
         this.nameProduct = nameProduct;
         this.priceProduct = priceProduct;
     }
 
-    public String getIdProduct() {
+    public int getIdProduct() {
         return idProduct;
     }
 
-    public void setIdProduct(String idProduct) {
+    public void setIdProduct(int idProduct) {
         this.idProduct = idProduct;
     }
 
@@ -35,5 +35,14 @@ public class Product {
 
     public void setPriceProduct(long priceProduct) {
         this.priceProduct = priceProduct;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "idProduct='" + idProduct + '\'' +
+                ", nameProduct='" + nameProduct + '\'' +
+                ", priceProduct=" + priceProduct +
+                '}';
     }
 }

@@ -1,4 +1,6 @@
 package FuramaResort.Services.ClassImpl;
 
-public class CustomerServiceImpl {
+import FuramaResort.Services.Interface.CustomerService;
+
+public class CustomerServiceImpl implements CustomerService {
 }

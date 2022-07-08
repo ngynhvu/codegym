@@ -1,82 +1,70 @@
 package Stack_Queue.Bai_tap.Queue;
 
+import java.util.EmptyStackException;
+
 public class Solution {
-    public static class Node{
-        int data;
-        Node link;
-    }
-    public static class Queue{
-        Node front, rear;
-    }
-    public static void enQueue(Queue q, int value){
-        Node  temp = new Node();
-        temp .data = value;
-        if (q .front ==  null)
-            q .front = temp;
-        else
-            q .rear .link = temp;
-
-        q .rear = temp;
-        q .rear .link = q .front;
-    }
-    public static int deQueue(Queue q){
-        if (q .front ==  null)
-        {
-            System.out.printf ("Queue is empty");
-            return Integer.MIN_VALUE;
+    private Node front;
+    private Node rear;
+    private int numbNodes;
+    public class Node{
+        private int data;
+        private Node link;
+        public Node(int data){
+            this.data = data;
         }
-
-        // If this is the last node to be deleted
-        int value; // Value to be dequeued
-        if (q .front == q .rear)
-        {
-            value = q .front .data;
-            q .front =  null;
-            q .rear =  null;
+        public int getData(){
+            return this.data;
         }
-        else  // There are more than one nodes
-        {
-            Node temp = q.front;
-            value = temp.data;
-            q.front = q.front.link;
-            q.rear.link= q.front;
-        }
-        return value;
     }
-    public static void displayQueue( Queue  q)
-    {
-        Node temp = q.front;
-        System.out.printf("Elements in Circular Queue are: ");
-        while (temp.link != q.front)
-        {
-            System.out.printf("%d ", temp.data);
-            temp = temp.link;
+    public void enQueue(int data){
+        Node temp = new Node(data);
+        if(front == null){
+            front = rear = temp;
+            numbNodes++;
+        }else{
+            rear.link = temp;
+            rear = temp;
+            rear.link = front;
+            numbNodes++;
         }
-        System.out.printf("%d", temp .data);
     }
-    public static void main(String args[])
-    {
-        // Create a queue and initialize front and rear
-        Queue  q = new Queue();
-        q .front = q .rear =  null;
-        // Inserting elements in Circular Queue
-        enQueue(q, 14);
-        enQueue(q, 22);
-        enQueue(q, 6);
-        // Display elements present in Circular Queue
-        displayQueue(q);
-        // Deleting elements from Circular Queue
-        System.out.printf("Deleted value = %d", deQueue(q));
-        System.out.println();
-        System.out.printf("Deleted value = %d", deQueue(q));
-        System.out.println();
 
-        // Remaining elements in Circular Queue
-        displayQueue(q);
+    public void deQueue(){
+        if(front == null){
+            throw new EmptyStackException();
+        }else if(front == rear){
+            front = rear = null;
+            numbNodes--;
+        }else{
+            front = front.link;
+            rear.link = front;
+            numbNodes--;
+        }
+    }
 
-        enQueue(q, 9);
-        enQueue(q, 20);
-        displayQueue(q);
+    public void displayQueue(){
+        if(front == null){
+            System.out.println("Empty");
+        }else{
+            Node temp = front;
+            for(int i = 0;  i<numbNodes; i++){
+                System.out.println(temp.getData());
+                temp= temp.link;
+            }
+        }
+    }
 
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        solution.enQueue(3);
+        solution.enQueue(23);
+        solution.enQueue(31);
+        solution.deQueue();
+        solution.enQueue(314);
+        solution.enQueue(213);
+        solution.deQueue();
+        solution.deQueue();
+        solution.deQueue();
+        solution.displayQueue();
     }
 }

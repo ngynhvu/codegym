@@ -1,18 +1,26 @@
 package FuramaResort.Models.Person;
 
-public class Employee {
-    private String employeeID;
+import java.util.Date;
+
+public class Employee extends Person {
+    private int employeeID;
     private String level;
     private String position;
     private long salary;
 
+    public Employee(String fullName, String dateOfBirth, String sex, String numberCMND, String phoneNumber, String email, int employeeID, String level, String position, long salary) {
+        super(fullName, dateOfBirth, sex, numberCMND, phoneNumber, email);
+        this.employeeID = employeeID;
+        this.level = level;
+        this.position = position;
+        this.salary = salary;
+    }
 
-
-    public String getEmployeeID() {
+    public int getEmployeeID() {
         return employeeID;
     }
 
-    public void setEmployeeID(String employeeID) {
+    public void setEmployeeID(int employeeID) {
         this.employeeID = employeeID;
     }
 
@@ -38,5 +46,15 @@ public class Employee {
 
     public void setSalary(long salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" + super.toString() +
+                "employeeID=" + employeeID +
+                ", level='" + level + '\'' +
+                ", position='" + position + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }

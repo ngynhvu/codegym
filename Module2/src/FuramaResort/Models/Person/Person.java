@@ -4,13 +4,13 @@ import java.util.Date;
 
 public abstract class Person {
     private String fullName;
-    private Date dateOfBirth;
-    private boolean sex;
+    private String dateOfBirth;
+    private String sex;
     private String numberCMND;
     private String phoneNumber;
     private String email;
 
-    public Person(String fullName, Date dateOfBirth, boolean sex, String numberCMND, String phoneNumber, String email) {
+    public Person(String fullName, String dateOfBirth, String sex, String numberCMND, String phoneNumber, String email) {
         this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
         this.sex = sex;
@@ -27,19 +27,19 @@ public abstract class Person {
         this.fullName = fullName;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public boolean isSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(boolean sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -65,5 +65,17 @@ public abstract class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "fullName='" + fullName + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", sex='" + sex + '\'' +
+                ", numberCMND='" + numberCMND + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
