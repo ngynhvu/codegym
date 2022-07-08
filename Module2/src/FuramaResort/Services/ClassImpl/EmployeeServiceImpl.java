@@ -5,6 +5,7 @@ import FuramaResort.Services.Interface.EmployeeService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class EmployeeServiceImpl implements EmployeeService {
@@ -28,19 +29,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void editEmployee(int idEmployee) {
-//        System.out.print("Level Employee: ");
-//        String level = scanner.nextLine();
-//        System.out.print("Position Employee: ");
-//        String position = scanner.nextLine();
-//        System.out.print("Salary Employee: ");
-//        long salary = scanner.nextLong();
-//        for (Employee employee: employees){
-//            if (employee.getEmployeeID() == idEmployee){
-//                employee.setLevel(level);
-//                employee.setPosition(position);
-//                employee.setSalary(salary);
-//                break;
-//            }
-//        }
+        Scanner scanner = new Scanner(System.in);
+        for(Employee employee: employeesList){
+            if(employee.getEmployeeID() == idEmployee){
+
+            }
+        }
     }
 }
