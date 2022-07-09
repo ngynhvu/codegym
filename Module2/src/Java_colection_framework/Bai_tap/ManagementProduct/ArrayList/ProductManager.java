@@ -1,6 +1,7 @@
 package Java_colection_framework.Bai_tap.ManagementProduct.ArrayList;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,10 +10,6 @@ public class ProductManager {
     Scanner scanner = new Scanner(System.in);
 
     public ProductManager(){}
-    public ProductManager(ArrayList<Product> products) {
-        this.products = products;
-    }
-
     public void displayProducts(){
         System.out.println("List of Products: ");
         for(Product product: products){
@@ -39,9 +36,21 @@ public class ProductManager {
     public void findByNameProduct(String name){
         for (Product product: products){
             if(product.getNameProduct() == name){
-
+                System.out.println("id: " + product.getIdProduct()+ "-name: "+ product.getNameProduct()+ "-price: "+product.getPriceProduct());
+            }else {
+                System.out.println("Not found");
             }
         }
     }
+    public void sortPriceASC(){
+        PriceASC priceASC = new PriceASC();
+        Collections.sort(this.products,priceASC);
+    }
+
+    public void sortPriceDESC(){
+        PriceDSC priceDESC = new PriceDSC();
+        Collections.sort(this.products,priceDESC);
+    }
+
 
 }

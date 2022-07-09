@@ -1,6 +1,6 @@
 package Java_colection_framework.Bai_tap.ManagementProduct.ArrayList;
 
-public class Product {
+public class  Product{
     private int idProduct;
     private String nameProduct;
     private long priceProduct;
@@ -45,4 +45,5 @@ public class Product {
                 ", priceProduct=" + priceProduct +
                 '}';
     }
+
 }
