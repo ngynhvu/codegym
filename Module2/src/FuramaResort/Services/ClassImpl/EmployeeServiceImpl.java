@@ -55,6 +55,13 @@ public class EmployeeServiceImpl implements EmployeeService {
                 employee.setSex(sex);
                 employee.setNumberCMND(cmnd);
                 employee.setPhoneNumber(phone);
+                employee.setEmail(email);
+                employee.setLevel(level);
+                employee.setPosition(position);
+                employee.setSalary(salary);
+                break;
+            }else {
+                System.out.println("Not Found");
             }
         }
     }

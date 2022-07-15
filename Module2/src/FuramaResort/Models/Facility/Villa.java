@@ -3,9 +3,9 @@ package FuramaResort.Models.Facility;
 public class Villa extends Facility{
     private String roomStandard;
     private double poolArea;
-    private byte floors;
+    private int floors;
 
-    public Villa(String serviceName, int areaUsing, long priceOfService, byte limitNumberPeople, String typeOfRental, String roomStandard, double poolArea, byte floors) {
+    public Villa(String serviceName, double areaUsing, long priceOfService, int limitNumberPeople, String typeOfRental, String roomStandard, double poolArea, int floors) {
         super(serviceName, areaUsing, priceOfService, limitNumberPeople, typeOfRental);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
@@ -28,11 +28,20 @@ public class Villa extends Facility{
         this.poolArea = poolArea;
     }
 
-    public byte getFloors() {
+    public int getFloors() {
         return floors;
     }
 
-    public void setFloors(byte floors) {
+    public void setFloors(int floors) {
         this.floors = floors;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +"Villa{" +
+                "roomStandard='" + roomStandard + '\'' +
+                ", poolArea=" + poolArea +
+                ", floors=" + floors +
+                '}';
     }
 }

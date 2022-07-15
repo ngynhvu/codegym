@@ -1,13 +1,13 @@
 package FuramaResort.Models;
 
 public class Contract {
-    private String numberContract;
-    private String bookingID;
+    private int numberContract;
+    private int bookingID;
     private long deposit;
     private long payment;
-    private String customerID;
+    private int customerID;
 
-    public Contract(String numberContract, String bookingID, long deposit, long payment, String customerID) {
+    public Contract(int numberContract, int bookingID, long deposit, long payment, int customerID) {
         this.numberContract = numberContract;
         this.bookingID = bookingID;
         this.deposit = deposit;
@@ -15,19 +15,19 @@ public class Contract {
         this.customerID = customerID;
     }
 
-    public String getNumberContract() {
+    public int getNumberContract() {
         return numberContract;
     }
 
-    public void setNumberContract(String numberContract) {
+    public void setNumberContract(int numberContract) {
         this.numberContract = numberContract;
     }
 
-    public String getBookingID() {
+    public int getBookingID() {
         return bookingID;
     }
 
-    public void setBookingID(String bookingID) {
+    public void setBookingID(int bookingID) {
         this.bookingID = bookingID;
     }
 
@@ -47,11 +47,11 @@ public class Contract {
         this.payment = payment;
     }
 
-    public String getCustomerID() {
+    public int getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(String customerID) {
+    public void setCustomerID(int customerID) {
         this.customerID = customerID;
     }
 }

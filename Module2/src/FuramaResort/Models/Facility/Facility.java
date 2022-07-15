@@ -2,12 +2,12 @@ package FuramaResort.Models.Facility;
 
 public abstract class Facility {
     private String serviceName;
-    private int areaUsing;
+    private double areaUsing;
     private long priceOfService;
-    private byte limitNumberPeople;
+    private int limitNumberPeople;
     private String typeOfRental;
 
-    public Facility(String serviceName, int areaUsing, long priceOfService, byte limitNumberPeople, String typeOfRental) {
+    public Facility(String serviceName, double areaUsing, long priceOfService, int limitNumberPeople, String typeOfRental) {
         this.serviceName = serviceName;
         this.areaUsing = areaUsing;
         this.priceOfService = priceOfService;
@@ -23,11 +23,11 @@ public abstract class Facility {
         this.serviceName = serviceName;
     }
 
-    public int getAreaUsing() {
+    public double getAreaUsing() {
         return areaUsing;
     }
 
-    public void setAreaUsing(int areaUsing) {
+    public void setAreaUsing(double areaUsing) {
         this.areaUsing = areaUsing;
     }
 
@@ -39,11 +39,11 @@ public abstract class Facility {
         this.priceOfService = priceOfService;
     }
 
-    public byte getLimitNumberPeople() {
+    public int getLimitNumberPeople() {
         return limitNumberPeople;
     }
 
-    public void setLimitNumberPeople(byte limitNumberPeople) {
+    public void setLimitNumberPeople(int limitNumberPeople) {
         this.limitNumberPeople = limitNumberPeople;
     }
 

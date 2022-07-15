@@ -1,17 +1,22 @@
 package FuramaResort.Models.Person;
 
-public class Customer {
-    private String customerID;
+public class Customer extends Person {
+    private int customerID;
     private String typeOfCustomer;
     private String address;
 
+    public Customer(String fullName, String dateOfBirth, String sex, String numberCMND, String phoneNumber, String email, int customerID, String typeOfCustomer, String address) {
+        super(fullName, dateOfBirth, sex, numberCMND, phoneNumber, email);
+        this.customerID = customerID;
+        this.typeOfCustomer = typeOfCustomer;
+        this.address = address;
+    }
 
-
-    public String getCustomerID() {
+    public int getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(String customerID) {
+    public void setCustomerID(int customerID) {
         this.customerID = customerID;
     }
 
@@ -29,5 +34,14 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Customer{" +
+                "customerID='" + customerID + '\'' +
+                ", typeOfCustomer='" + typeOfCustomer + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }
