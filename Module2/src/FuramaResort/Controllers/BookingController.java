@@ -41,7 +41,14 @@ public class BookingController {
     public void displayListBooking(){
         bookingService.displayBooking();
     }
+    public void displayListContract(){
+        bookingService.displayContract();
+    }
     public void addNewContract(){
         bookingService.addNewContract();
     }
+    public void editContracts(){
+        Scanner input = new Scanner(System.in);
+        int id = input.nextInt();
+        bookingService.editContract(id);}
 }

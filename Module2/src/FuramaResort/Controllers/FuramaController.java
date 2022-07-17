@@ -122,8 +122,10 @@ public class FuramaController {
                     bookingController.addNewContract();
                     break;
                 case 4:
+                    bookingController.displayListContract();
                     break;
                 case 5:
+                    bookingController.editContracts();
                     break;
                 case 0:
                     System.exit(0);

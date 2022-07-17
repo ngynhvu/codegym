@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 
 public class FacilityController {
+    Scanner input = new Scanner(System.in);
     private static FacilityController facilityController = new FacilityController();
     FacilityServiceImpl facilityService = new FacilityServiceImpl();
     BookingServiceImpl bookingService = new BookingServiceImpl();
@@ -17,63 +18,59 @@ public class FacilityController {
         facilityService.displayFacility();
     }
     public void addNewVilla(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Name of service: ");
-        String name = scanner.nextLine();
+        String name = input.nextLine();
         System.out.print("Area of service: ");
-        double area = Double.parseDouble(scanner.nextLine());
+        double area = Double.parseDouble(input.nextLine());
         System.out.print("Price of service: ");
-        long price = Long.parseLong(scanner.nextLine());
+        long price = Long.parseLong(input.nextLine());
         System.out.print("Limit people of service: ");
-        int people = Integer.parseInt(scanner.nextLine());
+        int people = Integer.parseInt(input.nextLine());
         System.out.print("Rental of service: ");
-        String rental = scanner.nextLine();
+        String rental = input.nextLine();
         System.out.print("Standard of service: ");
-        String standard = scanner.nextLine();
+        String standard = input.nextLine();
         System.out.print("Pool Area of service: ");
-        double pool = scanner.nextDouble();
+        double pool = input.nextDouble();
         System.out.print("Number of floors: ");
-        int floors = scanner.nextInt();
+        int floors = input.nextInt();
         int value = 1;
         facilityService.addNewVilla(new Villa(name,area,price,people,rental,standard,pool,floors),bookingService.numberUsingVilla());
     }
     public void addNewHouse(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Name of service: ");
-        String name = scanner.nextLine();
+        String name = input.nextLine();
         System.out.print("Area of service: ");
-        double area = Double.parseDouble(scanner.nextLine());
+        double area = Double.parseDouble(input.nextLine());
         System.out.print("Price of service: ");
-        long price = Long.parseLong(scanner.nextLine());
+        long price = Long.parseLong(input.nextLine());
         System.out.print("Limit people of service: ");
-        int people = Integer.parseInt(scanner.nextLine());
+        int people = Integer.parseInt(input.nextLine());
         System.out.print("Rental of service: ");
-        String rental = scanner.nextLine();
+        String rental = input.nextLine();
         System.out.print("Room standard service: ");
-        String standard = scanner.nextLine();
+        String standard = input.nextLine();
         System.out.print("Number of floors: ");
-        int floors = scanner.nextInt();
+        int floors = input.nextInt();
         facilityService.addNewHouse(new House(name,area,price,people,rental,standard,floors),bookingService.numberUsingHouse());
     }
     public void addNewRoom(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Name of service: ");
-        String name = scanner.nextLine();
+        String name = input.nextLine();
         System.out.print("Area of service: ");
-        double area = Double.parseDouble(scanner.nextLine());
+        double area = Double.parseDouble(input.nextLine());
         System.out.print("Price of service: ");
-        long price = Long.parseLong(scanner.nextLine());
+        long price = Long.parseLong(input.nextLine());
         System.out.print("Limit people of service: ");
-        int people = Integer.parseInt(scanner.nextLine());
+        int people = Integer.parseInt(input.nextLine());
         System.out.print("Rental of service: ");
-        String rental = scanner.nextLine();
+        String rental = input.nextLine();
         System.out.print("Free service: ");
-        String standard = scanner.nextLine();
+        String standard = input.nextLine();
         facilityService.addNewRoom(new Room(name,area,price,people,rental,standard),bookingService.numberUsingRoom());
     }
     public void addFacility(){
         int choice = -1;
-        Scanner input = new Scanner(System.in);
         while(choice != 4) {
             System.out.println("Facility Management");
             System.out.println("1. Add New Villa");

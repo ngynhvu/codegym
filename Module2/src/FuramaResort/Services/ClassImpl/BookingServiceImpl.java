@@ -56,6 +56,7 @@ public class BookingServiceImpl implements BookingService {
         Scanner input =new Scanner(System.in);
         for(Booking booking: bookingQueue){
             int numberOfContract= 1;
+            System.out.println("Contract ID: "+ numberOfContract);
             System.out.println("Booking ID: "+ booking.getBookingID());
             System.out.print("Money of deposit: ");
             long deposit = input.nextLong();
@@ -64,6 +65,25 @@ public class BookingServiceImpl implements BookingService {
             System.out.println("Customer ID: "+ booking.getCustomerID());
             contractTreeSet.add(new Contract(numberOfContract, booking.getBookingID(),deposit,payment, booking.getCustomerID()));
             numberOfContract++;
+        }
+    }
+    public void displayContract() {
+        for(Contract contract: contractTreeSet){
+            System.out.println(contract.toString());
+        }
+    }
+    public void editContract(int id){
+        Scanner input = new Scanner(System.in);
+        for (Contract contract: contractTreeSet) {
+            if(contract.getNumberContract() == id){
+                System.out.print("Money of deposit: ");
+                long deposit = input.nextLong();
+                System.out.print("Money of payment: ");
+                long payment = input.nextLong();
+                contract.setDeposit(deposit);
+                contract.setPayment(payment);
+                break;
+            }
         }
     }
 }
