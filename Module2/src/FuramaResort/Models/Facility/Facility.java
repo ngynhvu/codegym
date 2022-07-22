@@ -1,18 +1,28 @@
 package FuramaResort.Models.Facility;
 
 public abstract class Facility {
+    private String IdService;
     private String serviceName;
     private double areaUsing;
     private long priceOfService;
     private int limitNumberPeople;
     private String typeOfRental;
 
-    public Facility(String serviceName, double areaUsing, long priceOfService, int limitNumberPeople, String typeOfRental) {
+    public Facility(String IdService, String serviceName, double areaUsing, long priceOfService, int limitNumberPeople, String typeOfRental) {
+        this.IdService = IdService;
         this.serviceName = serviceName;
         this.areaUsing = areaUsing;
         this.priceOfService = priceOfService;
         this.limitNumberPeople = limitNumberPeople;
         this.typeOfRental = typeOfRental;
+    }
+
+    public String getIdService() {
+        return IdService;
+    }
+
+    public void setIdService(String idService) {
+        IdService = idService;
     }
 
     public String getServiceName() {
@@ -57,12 +67,11 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Facility{" +
-                "serviceName='" + serviceName + '\'' +
+        return "IdService='" + IdService + '\'' +
+                ", serviceName='" + serviceName + '\'' +
                 ", areaUsing=" + areaUsing +
                 ", priceOfService=" + priceOfService +
                 ", limitNumberPeople=" + limitNumberPeople +
-                ", typeOfRental='" + typeOfRental + '\'' +
-                '}';
+                ", typeOfRental='" + typeOfRental + '\'';
     }
 }

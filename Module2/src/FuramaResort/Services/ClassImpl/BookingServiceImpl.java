@@ -15,6 +15,18 @@ public class BookingServiceImpl implements BookingService {
     private static TreeSet<Booking> bookingTreeSet = new TreeSet<Booking>(new BookingComparator());
     private static TreeSet<Contract> contractTreeSet = new TreeSet<>();
     private static Queue<Booking> bookingQueue = new LinkedList<>();
+    public void displayUsingService(){
+        System.out.println("Information customer using service: ");
+        if(bookingTreeSet.isEmpty()){
+            System.out.println("No customer");
+        }else {
+            for(Booking booking: bookingTreeSet){
+                if(booking.getNameOfService() == "Villa"|| booking.getNameOfService() == "House"){
+                    System.out.println("Id customer = "+ booking.getCustomerID()+", Service = "+booking.getNameOfService() + ", Years using = "+ booking.getStartDay().substring(6,10));
+                }
+            }
+        }
+    }
     @Override
     public void addBooking(Booking booking) {
         bookingTreeSet.add(booking);

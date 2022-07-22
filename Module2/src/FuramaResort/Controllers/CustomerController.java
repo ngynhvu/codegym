@@ -2,12 +2,14 @@ package FuramaResort.Controllers;
 
 import FuramaResort.Models.Person.Customer;
 import FuramaResort.Services.ClassImpl.CustomerServiceImpl;
+import FuramaResort.Utils.BirthdayException;
 
 import java.util.Scanner;
 
 public class CustomerController {
 
     CustomerServiceImpl customerService = new CustomerServiceImpl();
+    BirthdayException birthdayException = new BirthdayException();
     public void displayCustomer(){
         for(Customer customer : customerService.findAll()){
             System.out.println(customer);
@@ -23,8 +25,7 @@ public class CustomerController {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Full name Customer: ");
         String name = scanner.nextLine();
-        System.out.print("Date of Birth Customer: ");
-        String date = scanner.nextLine();
+        String date = birthdayException.inputAndCheckBirthday18();
         System.out.print("Sex(Male or Female): ");
         String sex  = scanner.nextLine();
         System.out.print("CMND: ");

@@ -18,7 +18,6 @@ public class FacilityServiceImpl implements FacilityService {
     BookingServiceImpl bookingService = new BookingServiceImpl();
     @Override
     public void displayFacility() {
-        villaService.put(new Villa("anh", 12.8, 12000, 2,"23","2",2.0,2),1);
         Set<Villa> villas = villaService.keySet();
         for (Villa villa:villas) {
             if(villaService.isEmpty()){
