@@ -1,0 +1,3 @@
+Employee{Person{fullName='anh', dateOfBirth='20/01/2001', sex='3', numberCMND='4', phoneNumber='5', email='6'}employeeID=7, level='8', position='8', salary=80000}
+Employee{Person{fullName='anh', dateOfBirth='20/01/2001', sex='3', numberCMND='4', phoneNumber='5', email='6'}employeeID=7, level='8', position='8', salary=80000}
+Employee{Person{fullName='anh', dateOfBirth='20/01/2001', sex='3', numberCMND='4', phoneNumber='5', email='6'}employeeID=7, level='đại học', position='8', salary=80000}

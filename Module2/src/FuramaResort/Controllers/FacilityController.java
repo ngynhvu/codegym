@@ -5,6 +5,7 @@ import FuramaResort.Models.Facility.Room;
 import FuramaResort.Models.Facility.Villa;
 import FuramaResort.Services.ClassImpl.BookingServiceImpl;
 import FuramaResort.Services.ClassImpl.FacilityServiceImpl;
+import FuramaResort.Utils.AreaException;
 import FuramaResort.Utils.IdFacillityException;
 import FuramaResort.Utils.LimitPeopleException;
 import FuramaResort.Utils.PositiveException;
@@ -13,9 +14,9 @@ import java.util.Scanner;
 
 
 public class FacilityController {
+    private final String[] typeOfCustomer = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
     Scanner input = new Scanner(System.in);
     private static FacilityController facilityController = new FacilityController();
-    CheckIdService check = new CheckIdService();
     FacilityServiceImpl facilityService = new FacilityServiceImpl();
     BookingServiceImpl bookingService = new BookingServiceImpl();
     public void displayFacility(){
@@ -29,7 +30,7 @@ public class FacilityController {
         System.out.print("Name of service: ");
         String name = input.nextLine();
         System.out.print("Area of service: ");
-        double area = Double.parseDouble(input.nextLine());
+        double area = AreaException.inputAndCheck();
         System.out.print("Price of service: ");
         long price = Long.parseLong(input.nextLine());
         int people = LimitPeopleException.inputAndCheckLimitPeople();
@@ -38,7 +39,7 @@ public class FacilityController {
         System.out.print("Standard of service: ");
         String standard = input.nextLine();
         System.out.print("Pool Area of service: ");
-        double pool = input.nextDouble();
+        double pool = AreaException.inputAndCheck();
         System.out.print("Number of floors: ");
         int floors = PositiveException.inputAndCheckPositive();
         facilityService.addNewVilla(new Villa(idService, name,area,price,people,rental,standard,pool,floors),bookingService.numberUsingVilla());
@@ -50,7 +51,7 @@ public class FacilityController {
         System.out.print("Name of service: ");
         String name = input.nextLine();
         System.out.print("Area of service: ");
-        double area = Double.parseDouble(input.nextLine());
+        double area = AreaException.inputAndCheck();
         System.out.print("Price of service: ");
         long price = Long.parseLong(input.nextLine());
         int people = LimitPeopleException.inputAndCheckLimitPeople();
@@ -69,7 +70,7 @@ public class FacilityController {
         System.out.print("Name of service: ");
         String name = input.nextLine();
         System.out.print("Area of service: ");
-        double area = Double.parseDouble(input.nextLine());
+        double area = AreaException.inputAndCheck();
         System.out.print("Price of service: ");
         long price = Long.parseLong(input.nextLine());
         int people = LimitPeopleException.inputAndCheckLimitPeople();

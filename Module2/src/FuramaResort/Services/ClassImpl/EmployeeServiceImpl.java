@@ -9,13 +9,7 @@ import java.util.Scanner;
 
 
 public class EmployeeServiceImpl implements EmployeeService {
-    private static List<Employee> employeesList;
-
-    static {
-        employeesList = new ArrayList<>();
-        employeesList.add(new Employee("Nguyen Van A","18/01/2001", "Nam","23", "0705944385","anhhtgcd191331",1, "Trung cấp", "giám đốc",35000000));
-    }
-
+    private static List<Employee> employeesList = new ArrayList<>();
 
     @Override
     public List<Employee> findAll() {
@@ -25,6 +19,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void addEmployee(Employee employee) {
         employeesList.add(employee);
+
     }
 
     @Override

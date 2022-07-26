@@ -3,6 +3,7 @@ package FuramaResort.Controllers;
 import FuramaResort.Models.Person.Employee;
 import FuramaResort.Services.ClassImpl.EmployeeServiceImpl;
 import FuramaResort.Utils.BirthdayException;
+import FuramaResort.Utils.GenderException;
 
 import java.util.Scanner;
 
@@ -20,14 +21,14 @@ public class EmployeeController {
         System.out.print("Enter id employee: ");
         int id = scanner.nextInt();
         employeeService.editEmployee(id);
-    }
+    }   
     public void addNewEmployee(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Full name Employee: ");
         String name = scanner.nextLine();
         String date = birthdayException.inputAndCheckBirthday18();
-        System.out.print("Sex(Male or Female): ");
-        String sex  = scanner.nextLine();
+        System.out.print("Sex(1.Male, 2.Female, 3.Other): ");
+        String sex  = GenderException.inputAndCheck();
         System.out.print("CMND: ");
         String cmnd = scanner.nextLine();
         System.out.print("Phone number Employee: ");
@@ -41,7 +42,7 @@ public class EmployeeController {
         System.out.print("Position Employee: ");
         String position = scanner.nextLine();
         System.out.print("Salary Employee: ");
-        long salary = scanner.nextLong();
+        long salary = Long.parseLong(scanner.nextLine());
         employeeService.addEmployee(new Employee(name, date, sex, cmnd,phone,email,id, level, position, salary));
     }
 }

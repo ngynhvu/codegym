@@ -3,11 +3,13 @@ package FuramaResort.Controllers;
 import FuramaResort.Models.Person.Customer;
 import FuramaResort.Services.ClassImpl.CustomerServiceImpl;
 import FuramaResort.Utils.BirthdayException;
+import FuramaResort.Utils.ChooseException;
+import FuramaResort.Utils.GenderException;
 
 import java.util.Scanner;
 
 public class CustomerController {
-
+    private final String[] typeOfCustomer = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
     CustomerServiceImpl customerService = new CustomerServiceImpl();
     BirthdayException birthdayException = new BirthdayException();
     public void displayCustomer(){
@@ -26,8 +28,8 @@ public class CustomerController {
         System.out.print("Full name Customer: ");
         String name = scanner.nextLine();
         String date = birthdayException.inputAndCheckBirthday18();
-        System.out.print("Sex(Male or Female): ");
-        String sex  = scanner.nextLine();
+        System.out.print("Sex(1.Male, 2.Female, 3.Other): ");
+        String sex  = GenderException.inputAndCheck();
         System.out.print("CMND: ");
         String cmnd = scanner.nextLine();
         System.out.print("Phone number Customer: ");
@@ -36,10 +38,10 @@ public class CustomerController {
         String email = scanner.nextLine();
         System.out.print("Id Customer: ");
         int id = Integer.parseInt(scanner.nextLine());
-        System.out.print("Type of Customer: ");
-        String type = scanner.nextLine();
+        System.out.print("Type of Customer(1.Diamond, 2.Platinium, 3.Gold, 4.Silver, 5.Member): ");
+        int choose = ChooseException.inputAndCheck();
         System.out.print("Address Customer: ");
         String address = scanner.nextLine();
-        customerService.addCustomer(new Customer(name, date, sex, cmnd,phone,email,id, type, address));
+        customerService.addCustomer(new Customer(name, date, sex, cmnd,phone,email,id, typeOfCustomer[choose-1], address));
     }
 }
