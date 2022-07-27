@@ -39,6 +39,14 @@ public class BookingServiceImpl implements BookingService {
             System.out.println(booking.toString());
         }
     }
+    public void displayBookingInYear(){
+        for(Booking booking: bookingTreeSet){
+            String[] birthdayArr = booking.getStartDay().split("/");
+            int year = Integer.parseInt(birthdayArr[2]);
+            
+            System.out.println(booking.toString());
+        }
+    }
     public int numberUsingVilla(){
         int count = 0;
         for (Booking booking: bookingQueue) {

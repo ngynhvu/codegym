@@ -69,13 +69,16 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Information{" +
                 "fullName='" + fullName + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", sex='" + sex + '\'' +
                 ", numberCMND='" + numberCMND + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+                ", email='" + email + '\''
+                ;
+    }
+    public String simpleString(){
+        return fullName+","+dateOfBirth+","+sex+","+numberCMND+","+phoneNumber+","+email;
     }
 }

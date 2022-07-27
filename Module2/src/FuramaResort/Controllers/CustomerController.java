@@ -3,6 +3,7 @@ package FuramaResort.Controllers;
 import FuramaResort.Models.Person.Customer;
 import FuramaResort.Services.ClassImpl.CustomerServiceImpl;
 import FuramaResort.Utils.BirthdayException;
+import FuramaResort.Utils.CMNDException;
 import FuramaResort.Utils.ChooseException;
 import FuramaResort.Utils.GenderException;
 
@@ -31,9 +32,9 @@ public class CustomerController {
         System.out.print("Sex(1.Male, 2.Female, 3.Other): ");
         String sex  = GenderException.inputAndCheck();
         System.out.print("CMND: ");
-        String cmnd = scanner.nextLine();
+        String cmnd = CMNDException.inputAndCheckId();
         System.out.print("Phone number Customer: ");
-        String phone = scanner.nextLine();
+        String phone = CMNDException.inputAndCheckId();
         System.out.print("Email Customer: ");
         String email = scanner.nextLine();
         System.out.print("Id Customer: ");

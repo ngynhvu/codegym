@@ -9,11 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    private static List<Customer> customerList;
-    static {
-        customerList = new LinkedList<>();
-        customerList.add(new Customer("Hoang Tien Anh","18/01/2001", "Nam","23", "0705944385","anhhtgcd191331",1, "Trung cấp", "giám đốc"));
-    }
+    private static List<Customer> customerList=new LinkedList<>();
+
     @Override
     public List<Customer> findAll() {
         return customerList;

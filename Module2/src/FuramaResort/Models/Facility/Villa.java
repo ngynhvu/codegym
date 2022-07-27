@@ -39,7 +39,7 @@ public class Villa extends Facility{
     @Override
     public String toString() {
         return super.toString() +
-                "roomStandard='" + roomStandard + '\'' +
+                ", roomStandard='" + roomStandard + '\'' +
                 ", poolArea=" + poolArea +
                 ", floors=" + floors;
     }
