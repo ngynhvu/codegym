@@ -74,4 +74,7 @@ public abstract class Facility {
                 ", limitNumberPeople=" + limitNumberPeople +
                 ", typeOfRental='" + typeOfRental + '\'';
     }
+    public String simpleString(){
+        return IdService+","+serviceName+","+areaUsing+","+priceOfService+","+limitNumberPeople+","+typeOfRental;
+    }
 }

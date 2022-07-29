@@ -1,12 +1,15 @@
 package FuramaResort.Controllers;
 
 import FuramaResort.Models.Person.Customer;
+import FuramaResort.Models.Person.Employee;
 import FuramaResort.Services.ClassImpl.CustomerServiceImpl;
+import FuramaResort.Services.WriteReadFileCSV;
 import FuramaResort.Utils.BirthdayException;
 import FuramaResort.Utils.CMNDException;
 import FuramaResort.Utils.ChooseException;
 import FuramaResort.Utils.GenderException;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class CustomerController {
@@ -14,7 +17,8 @@ public class CustomerController {
     CustomerServiceImpl customerService = new CustomerServiceImpl();
     BirthdayException birthdayException = new BirthdayException();
     public void displayCustomer(){
-        for(Customer customer : customerService.findAll()){
+        List<Customer> customerList = WriteReadFileCSV.readCustomerCSV();
+        for(Customer customer: customerList){
             System.out.println(customer);
         }
     }

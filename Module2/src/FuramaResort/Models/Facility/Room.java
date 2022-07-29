@@ -22,4 +22,7 @@ public class Room extends Facility{
                 ", serviceFree='" + serviceFree + '\'' +
                 '}';
     }
+    public String simpleString(){
+        return super.simpleString()+","+serviceFree;
+    }
 }

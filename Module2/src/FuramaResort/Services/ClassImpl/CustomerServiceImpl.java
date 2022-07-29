@@ -3,10 +3,9 @@ package FuramaResort.Services.ClassImpl;
 import FuramaResort.Models.Person.Customer;
 import FuramaResort.Models.Person.Employee;
 import FuramaResort.Services.Interface.CustomerService;
+import FuramaResort.Services.WriteReadFileCSV;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class CustomerServiceImpl implements CustomerService {
     private static List<Customer> customerList=new LinkedList<>();
@@ -18,7 +17,23 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void addCustomer(Customer customer) {
-        customerList.add(customer);
+        if(customer!=null)
+        {
+            customerList.add(customer);
+            System.out.println("More success!");
+        }
+        else
+        {
+            System.out.println("Unsuccessful!");
+        }
+        Collections.sort(customerList, new Comparator<Customer>() {
+
+            @Override
+            public int compare(Customer o1, Customer o2) {
+                return o1.getFullName().compareTo(o2.getFullName());
+            }   
+        });
+        WriteReadFileCSV.writeToFileCustomer(WriteReadFileCSV.FILE_CUSTOMER,customer);
     }
 
     @Override

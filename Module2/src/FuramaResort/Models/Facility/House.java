@@ -33,4 +33,7 @@ public class House extends Facility {
                 ", floors=" + floors +
                 '}';
     }
+    public String simpleString(){
+        return super.simpleString()+","+roomStandard+","+floors;
+    }
 }

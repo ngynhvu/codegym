@@ -54,4 +54,18 @@ public class Contract {
     public void setCustomerID(int customerID) {
         this.customerID = customerID;
     }
+
+    @Override
+    public String toString() {
+        return "Contract{" +
+                "numberContract=" + numberContract +
+                ", bookingID=" + bookingID +
+                ", deposit=" + deposit +
+                ", payment=" + payment +
+                ", customerID=" + customerID +
+                '}';
+    }
+    public String simpleString(){
+        return numberContract+","+bookingID+","+deposit+","+payment+","+customerID;
+    }
 }

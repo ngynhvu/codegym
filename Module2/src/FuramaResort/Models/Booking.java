@@ -79,4 +79,7 @@ public class Booking {
                 ", typeOfService='" + typeOfService + '\'' +
                 '}';
     }
+    public String simpleString(){
+        return bookingID+","+startDay+","+endDay+","+customerID+","+nameOfService+","+typeOfService;
+    }
 }

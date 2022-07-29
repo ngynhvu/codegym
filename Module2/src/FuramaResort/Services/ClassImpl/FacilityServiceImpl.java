@@ -6,6 +6,7 @@ import FuramaResort.Models.Facility.House;
 import FuramaResort.Models.Facility.Room;
 import FuramaResort.Models.Facility.Villa;
 import FuramaResort.Services.Interface.FacilityService;
+import FuramaResort.Services.WriteReadFileCSV;
 
 import java.util.LinkedHashMap;
 import java.util.Set;
@@ -18,25 +19,25 @@ public class FacilityServiceImpl implements FacilityService {
     BookingServiceImpl bookingService = new BookingServiceImpl();
     @Override
     public void displayFacility() {
-        Set<Villa> villas = villaService.keySet();
+        Set<Villa>villas = WriteReadFileCSV.readVillaCSV();
         for (Villa villa:villas) {
-            if(villaService.isEmpty()){
+            if(villas.isEmpty()){
                 System.out.println("No service");
             }else {
                 System.out.println(villa);
             }
         }
-        Set<House> houses = houseService.keySet();
+        Set<House> houses = WriteReadFileCSV.readHouseCSV();
         for (House house:houses) {
-            if(houseService.isEmpty()){
+            if(houses.isEmpty()){
                 System.out.println("No service");
             }else {
                 System.out.println(house);
             }
         }
-        Set<Room> rooms = roomService.keySet();
+        Set<Room> rooms = WriteReadFileCSV.readRoomCSV();
         for (Room room:rooms) {
-            if(roomService.isEmpty()){
+            if(rooms.isEmpty()){
                 System.out.println("No service");
             }else {
                 System.out.println(room);
@@ -47,34 +48,30 @@ public class FacilityServiceImpl implements FacilityService {
     @Override
     public void addNewVilla(Villa villa, int value) {
         villaService.put(villa, value);
+        WriteReadFileCSV.writeToFileVilla(WriteReadFileCSV.FILE_VILLA,villa,value);
     }
 
     @Override
     public void addNewHouse(House house, int value) {
         houseService.put(house,value);
+        WriteReadFileCSV.writeToFileHouse(WriteReadFileCSV.FILE_HOUSE,house,value);
     }
 
     @Override
     public void addNewRoom(Room room, int value) {
         roomService.put(room, value);
+        WriteReadFileCSV.writeToFileRoom(WriteReadFileCSV.FILE_ROOM,room,value);
     }
-    public void displayFacilityMaintenance(){
-        Set<Villa> villas = villaService.keySet();
-        for (Villa villa:villas) {
-            if(villaService.isEmpty()){
-                System.out.println("No service");
-            }else if(bookingService.numberUsingVilla()>=5){
-                System.out.println(villa);
-            }else {
-                System.out.println("No facility Maintenance");
-            }
+    public void addFacilityMaintenance(){
+        if(bookingService.numberUsingVilla()>=5){
+               WriteReadFileCSV.writeToFileFacilityMaintance();
         }
         Set<House> houses = houseService.keySet();
         for (House house:houses) {
             if(houseService.isEmpty()){
                 System.out.println("No service");
             }else if(bookingService.numberUsingHouse()>=5){
-                System.out.println(house);
+                System.out.println(house+"Number using: "+ bookingService.numberUsingHouse());
             }else {
                 System.out.println("No facility Maintenance");
             }
@@ -84,7 +81,39 @@ public class FacilityServiceImpl implements FacilityService {
             if(roomService.isEmpty()){
                 System.out.println("No service");
             }else if(bookingService.numberUsingRoom() >=5){
-                System.out.println(room);
+                System.out.println(room+"Number using: "+ bookingService.numberUsingRoom());
+            }else {
+                System.out.println("No facility Maintenance");
+            }
+        }
+    }
+    public void displayFacilityMaintenance(){
+        Set<Villa> villas = villaService.keySet();
+        for (Villa villa:villas) {
+            if(villaService.isEmpty()){
+                System.out.println("No service");
+            }else if(bookingService.numberUsingVilla()>=5){
+                System.out.println(villa+"Number using: "+ bookingService.numberUsingVilla());
+            }else {
+                System.out.println("No facility Maintenance");
+            }
+        }
+        Set<House> houses = houseService.keySet();
+        for (House house:houses) {
+            if(houseService.isEmpty()){
+                System.out.println("No service");
+            }else if(bookingService.numberUsingHouse()>=5){
+                System.out.println(house+"Number using: "+ bookingService.numberUsingHouse());
+            }else {
+                System.out.println("No facility Maintenance");
+            }
+        }
+        Set<Room> rooms = roomService.keySet();
+        for (Room room:rooms) {
+            if(roomService.isEmpty()){
+                System.out.println("No service");
+            }else if(bookingService.numberUsingRoom() >=5){
+                System.out.println(room+"Number using: "+ bookingService.numberUsingRoom());
             }else {
                 System.out.println("No facility Maintenance");
             }

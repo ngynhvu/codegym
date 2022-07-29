@@ -92,6 +92,7 @@ public class FuramaController {
                     facilityController.addFacility();
                     break;
                 case 3:
+                    facilityController.displayFacilityMaintance();
                     break;
                 default:
                     System.out.println("No choice!");

@@ -2,7 +2,9 @@ package FuramaResort.Controllers;
 
 import FuramaResort.Models.Booking;
 
+import FuramaResort.Models.Facility.Villa;
 import FuramaResort.Services.ClassImpl.BookingServiceImpl;
+import FuramaResort.Utils.NameServiceException;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -10,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class BookingController {
+    private final String[] typeOfRental = {"Year", "Month", "Day", "Hours"};
     private static BookingController bookingController = new BookingController();
     BookingServiceImpl bookingService = new BookingServiceImpl();
     public void addNewBooking(){
@@ -31,12 +34,12 @@ public class BookingController {
         }
         System.out.print("Customer ID: ");
         int customerID = Integer.parseInt(input.nextLine());
-        System.out.print("Name of service: ");
-        String nameService = input.nextLine();
-//        bookingService.numberUsingVilla(nameService);
-        System.out.print("Type of service: ");
-        String type = input.nextLine();
-        bookingService.addBooking(new Booking(id,startDay,endDay,customerID,nameService,type));
+        System.out.print("Name of service(1.Villa, 2.House, 3. Room: ");
+        String nameService = NameServiceException.inputAndCheck();
+        System.out.print("Rental of service(1.Year, 2.Month, 3.Day, 4.Hours): ");
+        System.out.print("Enter choose: ");
+        int choose = Integer.parseInt(input.nextLine());
+        bookingService.addBooking(new Booking(id,startDay,endDay,customerID,nameService,typeOfRental[choose-1]));
     }
     public void displayListBooking(){
         bookingService.displayBooking();
@@ -51,4 +54,9 @@ public class BookingController {
         Scanner input = new Scanner(System.in);
         int id = input.nextInt();
         bookingService.editContract(id);}
+
+    public static void main(String[] args) {
+        BookingServiceImpl bookingService = new BookingServiceImpl();
+        System.out.println(bookingService.numberUsingVilla());
+    }
 }
