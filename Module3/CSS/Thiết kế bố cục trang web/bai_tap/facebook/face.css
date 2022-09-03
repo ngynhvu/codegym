@@ -1,0 +1,82 @@
+
+header {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    border: 1px solid silver;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+}
+
+h1 {
+    padding: 0;
+    margin: 5px;
+    color: white;
+}
+
+header img {
+    height: 90%;
+    float: left;
+}
+
+.menu {
+    float: left;
+}
+section{
+    background-color: #CDCDCD;
+}
+
+.left-content ul {
+    padding: 20px;
+}
+
+.left-content li {
+    list-style: none;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.left-content li a {
+    text-decoration: none;
+    color: black;
+}
+
+.left-content li:hover {
+    background-color: darkgray;
+}
+.left-content{
+    width: 10%;
+    min-height: 400px;
+    float:left;
+    margin-bottom: 5px;
+    position: fixed;
+    left: 0;
+    top: 60px;
+
+}
+
+.center-content{
+    width: 49%;
+    min-height: 400px;
+    float:left;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    left: 20%;
+    position: relative;
+}
+
+.right-content{
+    position: fixed;
+    width: 25%;
+    min-height: 400px;
+    float:right;
+    margin-bottom: 5px;
+    left: 75%;
+    top: 60px;
+}
