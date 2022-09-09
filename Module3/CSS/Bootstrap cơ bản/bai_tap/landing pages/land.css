@@ -1,0 +1,28 @@
+.header{
+    background-color: black;
+    height: 30px;
+}
+.header ul, .header li{
+    padding: 0;
+    margin: 0;
+}
+.header li {
+    position: relative;
+    float: left;
+    width: 100px;
+    padding-left: 10px;
+    list-style: none;
+}
+.header li a{
+    color: darkgray;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+.header li a:hover{
+    background-color:dimgray;
+    line-height: 30px;
+}
+.content{
+    background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fabstract-background-with-low-poly-design_1048-8478.jpg%3Fw%3D2000&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ftechnology-background&tbnid=Ilz-Ly7n_48MGM&vet=12ahUKEwjq0O2-74f6AhX2ktgFHYgbD0sQMyg7egQIARB1..i&docid=U6VMttfIazui4M&w=2000&h=1600&q=background%20image&ved=2ahUKEwjq0O2-74f6AhX2ktgFHYgbD0sQMyg7egQIARB1);
+}
