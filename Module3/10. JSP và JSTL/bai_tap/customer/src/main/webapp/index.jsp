@@ -13,20 +13,7 @@
     <title>$Title$</title>
   </head>
   <body>
-  <h1>Danh sách khách hàng</h1>
-  <table>
-    <tr>
-      <th>Tên</th>
-      <th>Ngày Sinh</th>
-      <th>Dịa Chỉ</th>
-      <th>Ảnh</th>
-    </tr>
-    <tr>
-      <td>${}</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+  <c:redirect url="/customer">
+  </c:redirect>
   </body>
 </html>
