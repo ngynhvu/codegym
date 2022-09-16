@@ -2,14 +2,12 @@ package repository.impl;
 
 import bean.Product;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ProductRepositoryImpl implements repository.ProductRepository {
     private static Map<String, Product> map;
     static {
+        map = new HashMap<>();
         map.put("PRO1",new Product("PRO1", "Phone", 1300000,new Date(), 4, "good"));
         map.put("PRO2",new Product("PRO2", "Tivi", 10000000,new Date(), 6, "good"));
         map.put("PRO3",new Product("PRO3", "Robot", 6500000,new Date(), 7, "good"));

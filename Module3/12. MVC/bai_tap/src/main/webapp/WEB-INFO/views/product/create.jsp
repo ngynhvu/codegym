@@ -12,30 +12,45 @@
 </head>
 <body>
     <h1>Add new Product</h1>
-    <form>
+    <c:if test="${error != null}">
+        <h2 style="color: red">${error}</h2>
+    </c:if>
+    <form action="/product" method="post">
         <table>
             <tr>
                 <td>ID Products: </td>
                 <td><input type="text" name="id"/></td>
             </tr>
             <tr>
-                <td>ID Products: </td>
+                <td>Name Products: </td>
                 <td><input type="text" name="name"/></td>
             </tr>
             <tr>
-                <td>ID Products: </td>
+                <td>Price Products: </td>
                 <td><input type="text" name="price"/></td>
             </tr>
             <tr>
-                <td>ID Products: </td>
-                <td><input type="text" name="id"/></td>
+                <td>Date Release: </td>
+                <td><input type="date" name="dateRelease"/></td>
             </tr>
             <tr>
-                <td>ID Products: </td>
-                <td><input type="text" name="id"/></td>
+                <td>Quantity Products: </td>
+                <td><input type="number" name="quantity"/></td>
             </tr>
-
+            <tr>
+                <td>Status Products: </td>
+                <td><input type="text" name="status"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" value="Reset" />
+                </td>
+                <td>
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
         </table>
+        <input type="hidden" name="action" value="create" />
     </form>
 </body>
 </html>
