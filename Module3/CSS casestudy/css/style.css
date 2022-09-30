@@ -1,0 +1,45 @@
+.header .logo{
+    width: 10%;
+}
+.form-login{
+    float: right;
+    
+}
+table
+.form-login li {
+    list-style: none;
+}
+.form-login li a{
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: darkgray;
+}
+.container-fluid li{
+    list-style: none;
+}
+.container-fluid li a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.left_menu{
+    width: 20%;
+    border: 1px solid black;
+    height: 530px;
+    float: left;
+}
+.content{
+    width: 100%;
+    border: 1px solid black;
+    height: 530px;
+}
+.footer{
+    border: 1px solid black;
+    position: relative;
+}
+h6{
+    text-align: center;
+}
+.footer .header .left_menu .menu{
+    position: fixed;
+}
