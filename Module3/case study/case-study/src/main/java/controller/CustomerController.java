@@ -73,6 +73,16 @@ public class CustomerController extends HttpServlet {
                 }
                 break;
             case "detail":
+                try {
+                    showDetailCustomer(request, response);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case "find":
+                break;
             case "list":
             default:
                 showList(request, response);
@@ -179,6 +189,13 @@ public class CustomerController extends HttpServlet {
         List<Customer> customers = service.findAll();
         request.setAttribute("customers", customers);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/furama-management/customer/list.jsp");
+        dispatcher.forward(request, response);
+    }
+    public void showDetailCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = service.findById(id);
+        request.setAttribute("customer", customer);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/furama-management/customer/detail.jsp");
         dispatcher.forward(request, response);
     }
 }

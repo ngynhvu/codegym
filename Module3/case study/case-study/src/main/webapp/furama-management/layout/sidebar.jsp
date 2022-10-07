@@ -13,6 +13,12 @@
                 <li class="header">
                     <a href="${contextPath}/customer?action=list"><span>Customer management</span></a>
                 </li>
+    <li class="header">
+    <a href="${contextPath}/service?action=list"><span>Service management</span></a>
+    </li>
+    <li class="header">
+    <a href="${contextPath}/employee?action=list"><span>Employee management</span></a>
+    </li>
             </ul>
         </div>
         <!-- #Menu -->

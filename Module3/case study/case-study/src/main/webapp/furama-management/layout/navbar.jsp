@@ -33,8 +33,8 @@
     aria-expanded="false">Employee
     <span class="caret"></span></a>
     <ul class="dropdown-menu">
-    <li><a href="${contextPath}/customer?action=list">List products</a></li>
-    <li><a href="${contextPath}/customer?action=create">Create product</a></li>
+    <li><a href="${contextPath}/employee?action=list">List employees</a></li>
+    <li><a href="${contextPath}/employee?action=create">Create employees</a></li>
     </ul>
     </li>
     <li class="dropdown">
@@ -51,8 +51,8 @@
     aria-expanded="false">Service
     <span class="caret"></span></a>
     <ul class="dropdown-menu">
-    <li><a href="${contextPath}/customer?action=list">List products</a></li>
-    <li><a href="${contextPath}/customer?action=create">Create product</a></li>
+    <li><a href="${contextPath}/service?action=list">List service</a></li>
+    <li><a href="${contextPath}/service?action=create">Create service</a></li>
     </ul>
     </li>
     <li class="dropdown">
@@ -64,19 +64,6 @@
     <li><a href="${contextPath}/customer?action=create">Create product</a></li>
     </ul>
     </li>
-            </ul>
-            <div class="col-sm-3 col-md-3">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="q" value="${q}" />
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-
             </ul>
         </div>
     </div>

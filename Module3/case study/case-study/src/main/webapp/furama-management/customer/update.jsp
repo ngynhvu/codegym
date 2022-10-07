@@ -104,7 +104,8 @@
                                         <input type="text" name="address" class="form-control" value="${customer.customerAddress}" placeholder="Address" tabindex="9" id="customer_address" />
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-custom" tabindex="11"><i class="fa fa-check" aria-hidden="true"></i> Add</button>
+                                <button type="submit" class="btn btn-primary btn-custom" tabindex="11"><i class="fa fa-check" aria-hidden="true"></i> Update</button>
+                                <input type="hidden" name="id" value="${customer.customerId}"/>
                             </form>
                         </div>
                     </div>

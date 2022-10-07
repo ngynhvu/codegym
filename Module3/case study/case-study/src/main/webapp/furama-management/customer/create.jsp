@@ -40,7 +40,7 @@
                                 <label for="customer_id">ID: <span style="color: red;"> *</span></label>
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="number" name="id" class="form-control" placeholder="Customer ID" tabindex="1" autofocus="autofocus" id="customer_id" />
+                                        <input type="number" name="customer_id" class="form-control" placeholder="Customer ID" tabindex="1" autofocus="autofocus" id="customer_id" />
                                     </div>
                                 </div>
 

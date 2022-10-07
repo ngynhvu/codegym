@@ -22,7 +22,7 @@
     <form method="GET">
 
         <input type="hidden" name="action" value="find" /> Search User: <input type="text" name="find_name" />
-        <input type="submit" value="Search" />
+        <input type="submit" placeholder="Search" />
 
     </form>
 </center>

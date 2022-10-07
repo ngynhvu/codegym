@@ -13,8 +13,7 @@ public class ConnectionUtils {
     public static Connection getConnection() throws SQLException, ClassNotFoundException {
         Connection connection = null;
         Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection(jdbcURL,
-                jdbcUsername, jdbcPassword);
+        connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
         System.out.println("Connect Success");
 
         return connection;

@@ -21,8 +21,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void deleteById(int id) throws Exception {
-        repository.deleteById(id);
+    public boolean deleteById(int id) throws Exception {
+        return repository.deleteById(id);
     }
 
     @Override
