@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img-of-the-day" style="width: 200px; height: 200px">
+<script>
+    let query = 'https://api.nasa.gov/planetary/apod?api_key=bEf3X3mYtwSwNJU3VSFhHzvrqhqYLNIbGnlUj2gC'
+    let request = new XMLHttpRequest();
+    request.open('GET', query);
+    request.onload = function() {
+        if (request.status === 200) {
+            let response = JSON.parse(request.responseText);
+            document.getElementById('img-of-the-day').setAttribute('src', response.url);
+        }
+    };
+    request.send();
+</script>
+<form th:object="${comment}" method="post" th:action="@{/create}">
+    <table class="table">
+        <tr>
+            <th>ratings:</th>
+            <th>
+                <select th:field="*{rating}">
+                    <option th:value="1" th:text="1"></option>
+                    <option th:value="2" th:text="2"></option>
+                    <option th:value="3" th:text="3"></option>
+                    <option th:value="4" th:text="4"></option>
+                    <option th:value="5" th:text="5"></option>
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <td>Author:</td>
+            <td>
+                <input type="text" th:field="*{author}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Feedback:</td>
+            <td>
+                <textarea type="text" th:field="*{feedback}"/>
+            </td>
+        </tr>
+        <tr >
+            <td colspan="2">
+                <button type="submit">Add Review</button>
+            </td>
+        </tr>
+
+    </table>
+</form>
+<div th:each="comment : ${commentList}">
+    +<span th:text="${comment.rating}"></span> <span th:text="${comment.feedback}"></span>
+    <hr>
+</div>
+</body>
+</html>

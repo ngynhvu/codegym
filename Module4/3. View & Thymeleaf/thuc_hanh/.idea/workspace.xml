@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="70336b89-8623-43fd-b3f8-0df3be1ed621" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Module1/Lab/Case-Study/string/lab1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/Lab/Case-Study/string/lab1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/Lab/Case-Study/string/lab2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/Lab/Case-Study/string/lab2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/Lab/Case-Study/string/lab3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/Lab/Case-Study/string/lab3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Controllers/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Controllers/FuramaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Contract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Facility/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Facility/Facility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Facility/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Facility/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Facility/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Facility/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Facility/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Facility/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Person/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Person/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Person/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Person/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Person/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Models/Person/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Services/BookingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Services/ContactService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Services/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Services/EmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Services/FacilityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/Services/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/FuramaResort/demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Controller/NhapKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Controller/NhapKhauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Controller/XuatKhauController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Controller/XuatKhauController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Models/NhapKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Models/NhapKhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Models/XuatKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Models/XuatKhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Services/ProductImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Services/ProductImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Utils/CheckException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Utils/CheckException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Utils/IDExcepion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Utils/IDExcepion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Utils/WriteAndReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FinalExam/Utils/WriteAndReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FuramaResort/Controllers/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FuramaResort/Controllers/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FuramaResort/Services/ClassImpl/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FuramaResort/Services/ClassImpl/FacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/FuramaResort/Services/WriteReadFileCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/FuramaResort/Services/WriteReadFileCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2. Spring Controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Spring Controller/thuc_hanh/customer-management" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2Ga2zPu6GmQkRQJiA4h9cILUpFH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/CodeGym/Module4/3. View & Thymeleaf/thuc_hanh"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70336b89-8623-43fd-b3f8-0df3be1ed621" name="Changes" comment="" />
+      <created>1666612635325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666612635325</updated>
+      <workItem from="1666612636657" duration="73000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
