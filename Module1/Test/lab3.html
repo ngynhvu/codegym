@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        input{
+            text-align: left;
+        }
+    </style>
+    <h1 style="text-align: center; font-weight: bold;">Quản lý sách</h1>
+    <div>
+        <table style="width: 50%;" >
+            <tr>
+                <th>Ma sach</th>
+                <th>Ten sach</th>
+                <th>Nam san xuat</th>
+                <th>So luong</th>
+                <th>Trang thai</th>
+            </tr>
+        </table>
+        <tr>
+            <p id="result"></p>
+        </tr>
+    </div>
+    <input type="button" onclick="" value="Thêm sách đã có">
+    <input type="button" onclick="createNewBook()" value="Thêm sách mới">
+    <input type="button" onclick="" value="Mượn sách">
+    <input type="button" onclick="" value="Hiển thị sách nhiều nhất">
+    <script>
+        class Book {
+            constructor(id, name, yearOfBorn, count, status) {
+                this.id = id;
+                this.name = name;
+                this.yearOfBorn = yearOfBorn;
+                this.count = count;
+                this.status = status;
+            }
+            setId(id) {
+                this.id = id;
+            }
+            getId() {
+                return this.id;
+            }
+            setName(name) {
+                this.name = name;
+            }
+            getName() {
+                return this.name;
+            }
+            setYear(year) {
+                this.yearOfBorn = year;
+            }
+            getYear() {
+                return this.yearOfBorn;
+            }
+            setCount(count) {
+                this.count = count;
+            }
+            getCount() {
+                return this.id;
+            }
+            setStatus(status) {
+                this.status = status;
+            }
+            getStatus() {
+                return this.status;
+            }
+        }
+
+        let arrBook = [];
+
+        function displayBook(array) {
+            let str = [];
+            let book;
+            for (let i = 0; i < array.length; i++) {
+                str += "<input value='" + array[i].getId() + "'>" +
+                    "<input value='" + array[i].getName() + "'>" +
+                    "<input value='" + array[i].getYear() + "'>" +
+                    "<input value='" + array[i].getCount() + "'>" +
+                    "<input value='" + array[i].getStatus() + "'>" + "<br>"
+            }
+            document.getElementById("result").innerHTML = str;
+        }
+        function createNewBook() {
+            let str = [];
+            let id = prompt("Mã số sách");
+            let name = prompt("Tên sách");
+            let year = prompt("Năm sản xuất: ");
+            let count = parseInt(prompt("Số quyển sách"));
+            let status = "True";
+            if (count > 0 && year.length < 5 && 0<id[0]<5) {
+                let book = new Book(id, name, year, count, status);
+                arrBook.push(book);
+                displayBook(arrBook);
+            } else {
+                alert("Nhập lại");
+            }
+        }
+
+    </script>
+
+</html>

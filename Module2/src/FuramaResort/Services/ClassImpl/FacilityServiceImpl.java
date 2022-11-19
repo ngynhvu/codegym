@@ -19,7 +19,7 @@ public class FacilityServiceImpl implements FacilityService {
     BookingServiceImpl bookingService = new BookingServiceImpl();
     @Override
     public void displayFacility() {
-        Set<Villa>villas = WriteReadFileCSV.readVillaCSV();
+        Set<Villa>villas = WriteReadFileCSV.readVillaCSV().keySet();
         for (Villa villa:villas) {
             if(villas.isEmpty()){
                 System.out.println("No service");
@@ -27,7 +27,7 @@ public class FacilityServiceImpl implements FacilityService {
                 System.out.println(villa);
             }
         }
-        Set<House> houses = WriteReadFileCSV.readHouseCSV();
+        Set<House> houses = WriteReadFileCSV.readHouseCSV().keySet();
         for (House house:houses) {
             if(houses.isEmpty()){
                 System.out.println("No service");
@@ -35,7 +35,7 @@ public class FacilityServiceImpl implements FacilityService {
                 System.out.println(house);
             }
         }
-        Set<Room> rooms = WriteReadFileCSV.readRoomCSV();
+        Set<Room> rooms = WriteReadFileCSV.readRoomCSV().keySet();
         for (Room room:rooms) {
             if(rooms.isEmpty()){
                 System.out.println("No service");
@@ -62,60 +62,23 @@ public class FacilityServiceImpl implements FacilityService {
         roomService.put(room, value);
         WriteReadFileCSV.writeToFileRoom(WriteReadFileCSV.FILE_ROOM,room,value);
     }
-    public void addFacilityMaintenance(){
-        if(bookingService.numberUsingVilla()>=5){
-               WriteReadFileCSV.writeToFileFacilityMaintance();
-        }
-        Set<House> houses = houseService.keySet();
-        for (House house:houses) {
-            if(houseService.isEmpty()){
-                System.out.println("No service");
-            }else if(bookingService.numberUsingHouse()>=5){
-                System.out.println(house+"Number using: "+ bookingService.numberUsingHouse());
-            }else {
-                System.out.println("No facility Maintenance");
-            }
-        }
-        Set<Room> rooms = roomService.keySet();
-        for (Room room:rooms) {
-            if(roomService.isEmpty()){
-                System.out.println("No service");
-            }else if(bookingService.numberUsingRoom() >=5){
-                System.out.println(room+"Number using: "+ bookingService.numberUsingRoom());
-            }else {
-                System.out.println("No facility Maintenance");
-            }
-        }
-    }
     public void displayFacilityMaintenance(){
-        Set<Villa> villas = villaService.keySet();
+        Set<Villa> villas = WriteReadFileCSV.readVillaCSV().keySet();
         for (Villa villa:villas) {
-            if(villaService.isEmpty()){
-                System.out.println("No service");
-            }else if(bookingService.numberUsingVilla()>=5){
-                System.out.println(villa+"Number using: "+ bookingService.numberUsingVilla());
-            }else {
-                System.out.println("No facility Maintenance");
+            if(WriteReadFileCSV.readVillaCSV().get(villa)>=5){
+                System.out.println(villa+" - " + WriteReadFileCSV.readVillaCSV().get(villa));
             }
         }
-        Set<House> houses = houseService.keySet();
+        Set<House> houses = WriteReadFileCSV.readHouseCSV().keySet();
         for (House house:houses) {
-            if(houseService.isEmpty()){
-                System.out.println("No service");
-            }else if(bookingService.numberUsingHouse()>=5){
-                System.out.println(house+"Number using: "+ bookingService.numberUsingHouse());
-            }else {
-                System.out.println("No facility Maintenance");
+            if(WriteReadFileCSV.readVillaCSV().get(house)>=5){
+                System.out.println(house+" - " + WriteReadFileCSV.readVillaCSV().get(house));
             }
         }
-        Set<Room> rooms = roomService.keySet();
+        Set<Room> rooms = WriteReadFileCSV.readRoomCSV().keySet();
         for (Room room:rooms) {
-            if(roomService.isEmpty()){
-                System.out.println("No service");
-            }else if(bookingService.numberUsingRoom() >=5){
-                System.out.println(room+"Number using: "+ bookingService.numberUsingRoom());
-            }else {
-                System.out.println("No facility Maintenance");
+            if(WriteReadFileCSV.readVillaCSV().get(room)>=5){
+                System.out.println(room+" - " + WriteReadFileCSV.readVillaCSV().get(room));
             }
         }
     }

@@ -6,15 +6,8 @@ import java.util.Scanner;
 
 public class demo {
     public static void main(String[] args) {
-        try {
-            student student1 = new student("anh",18);
-            FileWriter myWriter = new FileWriter("result.csv");
-            myWriter.write(student1.toString());
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
+        int a=6;
+        long b=a;
+        int c= (int) b;
     }
 }

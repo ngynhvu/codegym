@@ -1,0 +1,23 @@
+<script>
+    let n = parseInt(prompt("Nhập số phần tử của mảng: "));
+    let arr = new Array(n);
+    let sum = 0;
+    let count = 0;
+    if (n <= 50) {
+        for (let i = 1; i <= n; i++) {
+            let value = parseInt(prompt("Nhập phần tử thứ " + i));
+            arr.push(value);
+        }
+        alert(arr);
+        for (let i = 0; i < arr.length; i++) {
+            if (i % 2 == 0 && arr[i] % 2 != 0) {
+                sum = sum + arr[i];
+                count++;
+            }
+        }
+        
+        alert("Trung bình cộng các số lẻ ở vị trí chẵn là: " + sum/count);
+    } else {
+        alert("Phần tử không đc quá 50 phần tử");
+    }
+</script>

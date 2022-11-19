@@ -2,6 +2,7 @@ package FuramaResort.Services;
 
 import FuramaResort.Models.Booking;
 import FuramaResort.Models.Contract;
+import FuramaResort.Models.Facility.Facility;
 import FuramaResort.Models.Facility.House;
 import FuramaResort.Models.Facility.Room;
 import FuramaResort.Models.Facility.Villa;
@@ -164,9 +165,8 @@ public class WriteReadFileCSV {
             e.printStackTrace();
         }
     }
-    public static Set<Villa> readVillaCSV() {
+    public static LinkedHashMap<Villa, Integer> readVillaCSV() {
         LinkedHashMap<Villa, Integer> villaService = new LinkedHashMap<>();
-        Set<Villa> villaSet = villaService.keySet();
         FileReader fileReader = null;
         BufferedReader buffRead = null;
         try {
@@ -202,11 +202,10 @@ public class WriteReadFileCSV {
                 throw new RuntimeException(e);
             }
         }
-        return villaSet;
+        return villaService;
     }
-    public static Set<House> readHouseCSV() {
+    public static LinkedHashMap<House, Integer> readHouseCSV() {
         LinkedHashMap<House, Integer> houseService = new LinkedHashMap<>();
-        Set<House> houseSet = houseService.keySet();
         FileReader fileReader = null;
         BufferedReader buffRead = null;
         try {
@@ -241,11 +240,10 @@ public class WriteReadFileCSV {
                 throw new RuntimeException(e);
             }
         }
-        return houseSet;
+        return houseService;
     }
-    public static Set<Room> readRoomCSV() {
+    public static LinkedHashMap<Room, Integer> readRoomCSV() {
         LinkedHashMap<Room, Integer> roomService = new LinkedHashMap<>();
-        Set<Room> roomSet = roomService.keySet();
         FileReader fileReader = null;
         BufferedReader buffRead = null;
         try {
@@ -279,7 +277,7 @@ public class WriteReadFileCSV {
                 throw new RuntimeException(e);
             }
         }
-        return roomSet;
+        return roomService;
     }
     public static void writeToFileBooking(String path, Booking booking) {
         try {
@@ -375,18 +373,5 @@ public class WriteReadFileCSV {
             }
         }
         return contracts;
-    }
-    public static void writeToFileFacilityMaintance(String path, Room room, int value ) {
-        try {
-            FileWriter fileWriter = new FileWriter(path, true);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-
-            bufferedWriter.write(room.simpleString()+","+value);
-            bufferedWriter.newLine();
-
-            bufferedWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

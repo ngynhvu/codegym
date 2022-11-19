@@ -55,8 +55,4 @@ public class BookingController {
         int id = input.nextInt();
         bookingService.editContract(id);}
 
-    public static void main(String[] args) {
-        BookingServiceImpl bookingService = new BookingServiceImpl();
-        System.out.println(bookingService.numberUsingVilla());
-    }
 }

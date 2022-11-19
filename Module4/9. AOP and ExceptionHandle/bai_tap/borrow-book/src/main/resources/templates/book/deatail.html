@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit customer</title>
+</head>
+<body>
+<h1>Edit customer</h1>
+<p>
+  <a href="/books">Book list</a>
+</p>
+<th:block th:if="${message}">
+  <p th:text="${message}"></p>
+</th:block>
+<table th:object="${book}">
+  <tr>
+    <td>Name Book</td>
+    <td th:text="*{name}"></td>
+  </tr>
+  <tr>
+    <td>Quantity</td>
+    <td th:text="*{quantity}"></td>
+  </tr>
+
+</table>
+</body>
+</html>
