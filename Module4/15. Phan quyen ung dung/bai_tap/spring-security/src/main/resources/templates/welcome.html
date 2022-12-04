@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<h1>Trang chu</h1>
+<div sec:authorize="isAuthenticated()">
+    <h2>Welcome
+    <span style="color: green" sec:authentication="principal.username"></span></h2>
+</div>
+<div sec:authorize="hasRole('ADMIN')">
+    <table>
+        <tr>
+            <td><a href="">CREATE</a></td>
+            <td><a href="">UPDATE</a></td>
+            <td><a href="">DELETE</a></td>
+        </tr>
+    </table>
+</div>
+<div sec:authorize="hasRole('MEMBER')">
+    <table>
+        <tr>
+            <td><a href="">VIEW</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
