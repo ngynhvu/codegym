@@ -1,2 +1,9 @@
-package com.example.furamamanagerment.repository.employee.education;public class EducationRepository {
+package com.example.furamamanagerment.repository.employee.education;
+
+import com.example.furamamanagerment.model.employee.Education;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface EducationRepository extends JpaRepository<Education, Integer> {
 }
