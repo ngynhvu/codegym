@@ -64,8 +64,8 @@
 
         function getCustomer(customer) {
             return `<tr>`+
-                `<td ><input id="firstNameSM" value="${customer.firstname}"/></td>`+
-                `<td ><input id="lastNameSM" value="${customer.lastname}" /></td>` +
+                `<td id="firstNameSM">${customer.firstname}</td>`+
+                `<td id="lastNameSM">${customer.lastname}</td>` +
                 `<td><a class="updateCustomer" href="${customer.id}" data-bs-toggle="modal"
                        data-bs-target="#exampleModal">Update</a></td>` +
                 `<td><a class="deleteCustomer" href="${customer.id}" data-bs-toggle="modal"
@@ -106,7 +106,7 @@
                 let customerID = $("#customerIDDelete").val();
                 // goi ajax
                 $.ajax({
-                    type: "DELETE",
+                    type: "Po",
                     //tên API
                     url: `/api/customer/${customerID}`,
                     //xử lý khi thành công
@@ -221,25 +221,27 @@
     </script>
 </head>
 <body>
-<form id="add-customer">
-    <table>
-        <tr>
-            <td>FirstName:</td>
-            <td><input type="text" id="firstname" placeholder="First Name"></td>
-        </tr>
-        <tr>
-            <td>LastName:</td>
-            <td><input type="text" id="lastname" placeholder="Last Name"></td>
-        </tr>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" value="Add" id="addNew" ></td>
-            <!--            <td><input type="submit" value="Add" id="addNew" onclick="addNewSmartPhone()"></td>-->
-        </tr>
-    </table>
-</form>
+<!--<form id="add-customer">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td>FirstName:</td>-->
+<!--            <td><input type="text" id="firstname" placeholder="First Name"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>LastName:</td>-->
+<!--            <td><input type="text" id="lastname" placeholder="Last Name"></td>-->
+<!--        </tr>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td></td>-->
+<!--            <td><input type="submit" value="Add" id="addNew" ></td>-->
+<!--            &lt;!&ndash;            <td><input type="submit" value="Add" id="addNew" onclick="addNewSmartPhone()"></td>&ndash;&gt;-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</form>-->
 <h1>Customer List</h1>
+
+<a class="add-new" data-bs-toggle="modal" data-bs-target="#addModal">Add New</a>
 <form>
     <input type="text" id="findName" placeholder="Search">
     <input type="submit" value="Search" id="searchCustomer" >
@@ -261,8 +263,8 @@
     <!--    </th:block>-->
     <th:block th:each="customer: ${customers}">
         <tr>
-            <td ><input id="firstNameSM" th:value="${customer.firstName}"/></td>
-            <td ><input id="lastNameSM" th:value="${customer.lastName}" /></td>
+            <td id="firstNameSM" th:text="${customer.firstName}"></td>
+            <td id="lastNameSM" th:text="${customer.lastName}"></td>
             <td><a class="updateCustomer" th:href="${customer.getId()}" data-bs-toggle="modal"
                    data-bs-target="#exampleModal">Update</a></td>
             <td><a class="deleteCustomer" th:href="${customer.getId()}" data-bs-toggle="modal"
@@ -284,10 +286,12 @@
                     <h1  id="customerIDDelete">Are you sure?</h1>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="deleteCustomer" data-bs-dismiss = "modal">Delete</button>
-            </div>
+            <form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="deleteCustomer" data-bs-dismiss = "modal">Delete</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -296,11 +300,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <input type="hidden" id="id">
                 <div class="form-group">
                     <label>First Name</label>
                     <input type="text" class="form-control"  id="updateFirst">
@@ -318,5 +321,33 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addModalLabel">Edit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="id">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control"  id="firstname" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control"  id="lastname" placeholder="Last Name">
+                </div>
+                <div class="form-group"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addNew" data-bs-dismiss = "modal">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
