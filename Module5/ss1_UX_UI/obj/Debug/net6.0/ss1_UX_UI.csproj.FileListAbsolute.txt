@@ -1,0 +1,15 @@
+E:\CodeGym\Module5\ss1_UX_UI\bin\Debug\net6.0\ss1_UX_UI.exe
+E:\CodeGym\Module5\ss1_UX_UI\bin\Debug\net6.0\ss1_UX_UI.deps.json
+E:\CodeGym\Module5\ss1_UX_UI\bin\Debug\net6.0\ss1_UX_UI.runtimeconfig.json
+E:\CodeGym\Module5\ss1_UX_UI\bin\Debug\net6.0\ss1_UX_UI.dll
+E:\CodeGym\Module5\ss1_UX_UI\bin\Debug\net6.0\ss1_UX_UI.pdb
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ss1_UX_UI.csproj.AssemblyReference.cache
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ss1_UX_UI.GeneratedMSBuildEditorConfig.editorconfig
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ss1_UX_UI.AssemblyInfoInputs.cache
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ss1_UX_UI.AssemblyInfo.cs
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ss1_UX_UI.csproj.CoreCompileInputs.cache
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ss1_UX_UI.dll
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\refint\ss1_UX_UI.dll
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ss1_UX_UI.pdb
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ss1_UX_UI.genruntimeconfig.cache
+E:\CodeGym\Module5\ss1_UX_UI\obj\Debug\net6.0\ref\ss1_UX_UI.dll
